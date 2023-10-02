@@ -1,0 +1,42 @@
+GIT
+-----
+git is a version control system which means that git is used to track changes in files.
+ 
+ GITHUB
+ --------
+ github is a web based git repository hosting service. 
+
+ the first requirement to use git is to install git and create an account in github.
+ we have to connect git with github to use. there are certain cmds used for this
+
+connect git with github
+-------------------------
+open git bash and type:
+(this has to do only once)
+git config --global user.name <username> //username of github account
+git config --global user.email <email>  // email in github account
+
+most used git cmds
+-------------------
+git clone //it copies the repository to local system
+git add. //it stage the for the commit cmd, "." means that all files. if you need to stage particular file use "git add <filename>"
+git commit // it is used to save the change in local repository
+git -m "commit message" //it is used to add a message 
+git push //it uploads the content from local repository to remote repository
+git pull //it used to fetch and download content from a remote repository and immediately update the local repository to match that content.
+git branch //it shows the branches
+git branch <new branch name> //it creates new branch
+git push origin <branch-name> //it uploads the branch from local repo to remote repo
+git pull origin <branch-name> //it used to fetch and download branch from a remote repository and immediately update the local repository to match that branch
+git checkout //it used to navigate between branches
+git checkout -b <branch-name> // creates a new branch and change to new branch
+git status // shows the status of the repository
+git init //creates new local repo
+git merge //it is used to merge the specified branch into the current branch.
+git revert //it undo the previous commit
+git branch -d //delete the branch in  local repo
+git push origin --delete <remote branch name> //delete the remote branch name
+
+
+ 
+
