@@ -37,6 +37,7 @@ git revert //it undo the previous commit
 git branch -d //delete the branch in  local repo
 git push origin --delete <remote branch name> //delete the remote branch name
 git stash //it temprory save the change that commit
+git
 
 
  
