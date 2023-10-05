@@ -1,44 +1,135 @@
 GIT
 -----
 git is a version control system which means that git is used to track changes in files.
+usually used for coordinating work among programmers who are collaboratively developing source code during software development
  
  GITHUB
  --------
- github is a web based git repository hosting service. 
+ github is a repository hosting service which is based on git. 
 
- the first requirement to use git is to install git and create an account in github.
- we have to connect git with github to use. there are certain cmds used for this
+ 
 
-connect git with github
+CONNECT GIT WITH GITHUB
 -------------------------
+the first requirement to use git is to install git and create an account in github.
+ we have to connect git with github to use. there are certain cmds used for this
 open git bash and type:
 (this has to do only once)
-git config --global user.name <username> //username of github account
-git config --global user.email <email>  // email in github account
 
-most used git cmds
+"git config --global user.name <username> "
+this command is used to enter the username of github account.
+
+"git config --global user.email <email>" 
+this command is used to enter the email of github account.
+
+
+
+BASIC GIT COMMANDS
 -------------------
-git clone //it copies the repository to local system
-git add. //it stage the for the commit cmd, "." means that all files. if you need to stage particular file use "git add <filename>"
-git commit // it is used to save the change in local repository
-git -m "commit message" //it is used to add a message 
-git push //it uploads the content from local repository to remote repository
-git pull //it used to fetch and download content from a remote repository and immediately update the local repository to match that content.
-git branch //it shows the branches
-git branch <new branch name> //it creates new branch
-git push origin <branch-name> //it uploads the branch from local repo to remote repo
-git pull origin <branch-name> //it used to fetch and download branch from a remote repository and immediately update the local repository to match that branch
-git checkout //it used to navigate between branches
-git checkout -b <branch-name> // creates a new branch and change to new branch
-git status // shows the status of the repository
-git init //creates new local repo
-git merge //it is used to merge the specified branch into the current branch.
-git revert //it undo the previous commit
-git branch -d //delete the branch in  local repo
-git push origin --delete <remote branch name> //delete the remote branch name
-git stash //it temprory save the change that commit
-git
-b
+    GIT init
+    ---------
+    "git init <new repo name>"
+    the git init command creates a new local repository and ready to use
+
+    GIT CLONE 
+    ----------
+    "git clone <url>"
+    the git clone command copies the repository from the github to local system.
+    the url is obatained from thw github.
+
+    GIT ADD 
+    --------
+    "git add ." 
+    the git add . command is used for staging. it is used before commit command.
+           OR 
+    "git add <file name>"
+    this command is used when you need to stage a purticular file.
+    Staging and committing separately gives developers complete control over the history of their project without changing how they code and work.
+
+    GIT COMMIT 
+    -----------
+   " git -m <"commit message">"
+   git commit command is used for save the changes that has been staged.
+           OR
+    "git commit -a"
+    This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then.
+
+    GIT STATUS 
+    ----------
+    "git status"
+    git status command will show the status of changes as untracked, modified, or staged.
+
+    GIT BRANCH 
+    ----------
+    "git branch"
+    git branch command show all the branches in your reposoitory and it shows which branch you are currently on.
+
+    "git branch <new branch name>"
+    this branch command is used to create a new branch.
+
+    "git branch -d <branch name>"
+    this command is used for deleting the branch in the local repository.
+
+    GIT CHECKOUT 
+    ------------
+    "git checkout <branch name>"
+    this command is used for navigate or switch one branch to another branch
+
+    "git checkout -b <branch name>"
+    this particular command is used to create new branch and it will switch to the newly created branch.
+
+    GIT MERGE 
+    ----------
+    "git merge <branch name>"
+    git merge command combine changes made on two distinct branches.
+    a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.
+
+    GIT PULL 
+    ---------
+    "git pull"
+    git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content.
+
+    "git pull origin <branch name>"
+    git pull origin  command will not only download new changes from the remote repository.
+     It will also directly integrate them into your local matching  branch.
+
+     GIT PUSH 
+     ---------
+     "git push"
+     the git push command will uploads the content from the local repository to the remote repository
+
+     "git push origin <branch name>"
+     the git push command will not only  uploads the content from the local repository to the remote repository
+     it will also directly integrate them into your remote matching branch.
+
+     GIT REVERT 
+     -----------
+     "git revert" 
+     git revert command is used to undo the previous commit we have done. it helps to go back
+
+
+     GIT STASH 
+     ----------
+     "git stash" 
+     This command temporarily stores all the modified tracked files.
+
+     "git stash pop"
+     git stash pop command will restore the previously stored stash file.
+
+     "git stash list"
+     this command will list the stashed files.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
