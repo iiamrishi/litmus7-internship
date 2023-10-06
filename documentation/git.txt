@@ -105,7 +105,7 @@ BASIC GIT COMMANDS
      GIT REVERT 
      -----------
      "git revert" 
-     git revert command is used to undo the previous commit we have done. it helps to go 
+     git revert command is used to undo the previous commit we have done. it helps to go back
 
 
      GIT STASH 
