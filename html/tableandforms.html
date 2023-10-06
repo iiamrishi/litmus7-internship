@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables and forms</title>
+</head>
+<body>
+  <h3>TABLE</h3>
+  rows and columns forms a table.<br>
+  we can create tables in the HTML.<br>
+  <table border="1"><!--the border attribute is used to give border to the table-->
+
+    <tr><!--tr mwans table row-->
+        <th> heading </th><!--th means table head -->
+        <th colspan="2">another heading</th> 
+    </tr>
+    <tr>
+        <td>a</td><!--td is table data-->
+        <td>b</td>
+        <td>c</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+  </table>
+  the table is created using the &lt;table&gt; tag.<br>
+  we can see here that the &quot;another heading&quot; is taking more space. <br>
+  this is done by using &quot;colspan= &quot;&quot;attribute.
+
+  <h3>FORMS</h3>
+  the forms are used to create HTML forms to user input.<br>
+  for example the user login can be created using forms.<br>
+  <h4>&lt;input&gt;</h4>
+  the input element is used inside the forms to impliment like checkbox, radio button,text,submit button. <br><br>
+  here is an example for login page created using forms<br>
+  <forms>
+      <label>username: <input type="text"></label><br>
+      <label>password: <input type="password"></label><br>
+      <label> <input type="submit"></label> 
+
+  </forms>
+  <forms>
+      <h4>radio button example</h4>
+      <label>male <input type="radio" name="gender" value="male"></label>
+      <label>female <input type="radio" name="gender" value="female"></label>
+      <label>other <input type="radio" name="gender" value="other"></label><br>
+  </forms>
+  here implimented is radio button. we can see that only one choice can be selected in radio button<br>
+  <forms>
+      <h4>checkbox</h4>
+      <label>english <input type="checkbox" name="language" value="english"></label><br>
+      <label>malayalam <input type="checkbox" name="language" value="malayalam"></label><br>
+      <label>hindi<input type="checkbox" name="language" value="hindi"></label><br>
+      <label>tamil<input type="checkbox" name="language" value="tamil"></label><br>
+      here is the example of chcekbox. in this we can select more than one choice.
+  </forms>
+  <forms>
+      <h4>combobox</h4>
+      choose the country:
+     <select name="country" >
+      <option value="India">India</option>
+      <option value="China">China</option>
+      <option value="Japan">Japan</option>
+     </select><br>
+   this is an example of combo box. the option tag is used to create the combo box.
+  </forms>
+
+</body>
+</html>
