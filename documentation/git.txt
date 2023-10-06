@@ -102,12 +102,6 @@ BASIC GIT COMMANDS
      the git push command will not only  uploads the content from the local repository to the remote repository
      it will also directly integrate them into your remote matching branch.
 
-     GIT REVERT 
-     -----------
-     "git revert" 
-     git revert command is used to undo the previous commit we have done. it helps to go back
-
-
      GIT STASH 
      ----------
      "git stash" 
