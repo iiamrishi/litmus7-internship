@@ -3,54 +3,137 @@
 <head> <!-- this is the head tag-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="about meta" content="meta is metadata; metadata is the data about the data, metadata will not be visible in the main data">
+    <meta name="description" content="meta is metadata; metadata is the data about the data, metadata will not be visible in the main data">
+    <meta http-equiv="refresh" content="50">
+
+    
     <title>this is the title</title> <!--it gives the title -->
 </head>
 <body><!--the body tag is where you write the content-->
-   <h7>hello world!</h7><br><!--this "br" tag is example of void element it does not have a closing tag -->
-   this a documentation on HTML
-   <nav>
-    <ul><!--unorderd list-->
-        <li><a href ="https://www.w3schools.com/html/html5_semantic_elements.asp"title="sematic elemennts"target="_blank" >sematic element referance</a> </li>
-        <!--the taget set to "_blank "is used to open the URL in the new window or it will open in same window-->
-        <li><a href="https://www.w3schools.com/html/html_formatting.asp" title="html_formatting" target="_blank">formating tags </a></li>
-            
+    <h3>HTML TAGS</h3><hr><br><!--this "br" tag is example of void element it does not have a closing tag -->
+   The HTML tags are the keywords that used to create webpage. the HTML tags usually have opening tag and closing tag and some does not have closing tags.<br>
+   the syntax for HTML tags:<br>
+   <pre><!--the <pre> tag is called preformatting tag it shows exactly what is written-->
+    &lt;tag&gt;&lt;/tag&gt; <!--the &lt; and &gt; is an example how to inserts certain symbols in HTML-->
+   </pre>
+   <h3>!DOCTYPE</h3>
+   !DOCTYPE is an instruction that tells the web browser about the markup language in which the current page is written.It is used in HTML 5.<br>
 
+   <h3>META TAG</h3>
+   meta tags are the tags that used to give information about the webpage. the meta tags are written in head tag.<br>
+   these are some use of meta tag like<br>
+   <ul>
+    <li>charset</li>
+    <li>viewport</li>
+    <li>description</li>
+    <li>author</li>
+   </ul>
+   an example of usage of meta tags :<br>
+   <pre>
+    &lt;meta charset ="UTF-8"&gt;
+   </pre>
+   <h3>VOID ELEMENTS</h3>
+   void elements are the elements which only have opening tag and closing tag is not specified.<br>
+   some of the void elements are :<br>
+   <ul>
+  <li><b>&lt;br&gt;</b><br></li> 
+  the br tag  is used to break the line.
+  <li><b></b>&lt;meta&gt;</b><br></li>
+  meta tags are the tags that used to give information about the webpage
+  <li><b>&lt;hr&gt;</b><br></li>
+  hr tag is used for horizonal line
+  <li><b> &lt;input&gt;</b><br></li>
+  input tag specifies an input field where the user can enter data.
+  <li><b>&lt;cols&gt;</b><br></li>
+  the cols tag specifies properties of column. it is used in table tag.
+  <li><b>&lt;img&gt;</b><br></li>
+  the img tag is used to insert image.
+   </ul>
+
+   <h3>SEMATIC ELEMENTS</h3>
+   sematic elements are the elements which describes the meaning clearly. there are many sematic tags available in HTML.<br>
+   some of them are:<br>
+   <ul>
+    <li><b>&lt;article&gt;</b><br></li> 
+    the article tag is used to specify the article content
+    <li><b>&lt;footer&gt;</b><br></li>
+    this tag specifies the footer section 
+    <li><b>&lt;header&gt;</b><br></li> 
+    this tag is used for introductory section
+    <li><b>&lt;section&gt;</b><br></li> 
+    the section tag defines the section in document
+    <li><b>&lt;nav&gt;</b><br></li> 
+    the nav tag defines the set of navigation links
+   </ul>
+
+   <h3>NON SEMATIC ELEMENTS</h3>
+   non sematic elements are the elements does not describe the meaning clearly unlike the sematic elements<br>
+   example of non semantic tags are:<br>
+   <ul>
+    <li><b>&lt;div&gt;</b><br></li> 
+    the div tag is used to make division in the content
+    <li><b>&lt;span&gt;</b><br></li> 
+    the span tag is used to group elements for syling purpose.
+   </ul>
+
+   <h3>FORMATTING TAG</h3>
+   formatting tags are the tags that are used to display the special type os text.<br>
+   some of the formatting tags are:<br>
+   <ul>
+    <li><b>bold text</b></li>
+    <li><strong>important text</strong></li>
+    <li><i>italic text</i></li>
+    <li><small>small text</small></li>
+    <li>this is<sup>superscripted</sup></li>
+    <li>this is<sub>superscripted</sub></li>
     </ul>
-   </nav>
-   <article><!--article is a sematic element. sematic elemets describes meaning clearly-->
-   <p>The lone lamp post of the one-street town flickered, not quite dead but definitely on its way out.
-    Suitcase by her side, she paid no heed to the light, the street or the town. 
-    A car was coming down the street and with her arm outstretched and thumb in the air, she had a plan.</p>
-</article>
-<ul>
-    <li>some sematic elements</li>
-    <ol><!--orderd list-->
-    <li>article</li><!--li means list-->
-    <li>section</li>
-    <li>footer</li>
-    <li>nav</li>
-     <li>time</li>
-     </ol>
-     <ul>
-     <li>non sematic element</li>
-    <ol>
-        <li>div</li><!--div tag is used for division  -->
-        <li>span</li><!--span is a container used for phrasing-->
-        </ol>
-</ul>
-<h3>formating tags</h3>
-formating tags are the tags that are used to display special types of texts<br>
-some of the formatting tags are:<br>
-<ul>
-<li><b>bold text</b></li>
-<li><strong>important text</strong></li>
-<li><i>italic text</i></li>
-<li><small>small text</small></li>
-<li>this is<sup>superscripted</sup></li>
-<li>this is<sub>superscripted</sub></li>
-</ul>
-<img src="" alt="" width="32" height="32"><!--add the address or path of image to show the image-->
 
+    <h3>LIST IN HTML</h3>
+    there are two types of list in html.<br>
+    <ol>
+        <li>orderd list</li>
+        <li>unorderd list</li>
+    </ol>
+    unorderd list is the list that is listed using dot or square or circle dot<br>
+    syntax:<br>
+    <pre>
+        &lt;ul&gt;
+        &lt;li&gt;&lt;content&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;conetnt&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    </pre>
+
+    ordered list is the list that is listed useing numericals like roman numericals or numbers.<br>
+    syntax:<br>
+    <pre>
+        &lt;ol&gt;
+        &lt;li&gt;&lt;content&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;conetnt&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+    </pre>
+
+    <h3>ANCHOR TAG</h3>
+    anchor tag is the tag used for hyperlinking.<br>
+    here is an example of using the anchor tag:<br>
+    <a href ="https://www.w3schools.com/html/html5_semantic_elements.asp"title="sematic elemennts"target="_blank" >sematic element referance</a><br>
+    this is how i used hyperlink ,let me explain:
+    <pre>
+    &lt;a href ="https://www.w3schools.com/html/html5_semantic_elements.asp"title="sematic elemennts"target="_blank" &gt;sematic element referance&lt;/a&gt;
+    </pre>
+
+    in this line we can see that &lt;a&gt; tag is the anchor tag and in  &quot;hreff&quot; we add the url or link where it is linked. <br>
+    the &quot;title&quot; we give the name , in &quot;target&quot; is when we can change where it should open link in the same window or new tab here it will open in new tab.
+
+    <h3>IMG TAG AND PICTURE TAG</h3>
+    the img tag is used to insert the images.<br>
+    the picture tag is similar as img tag but picture tag give the responsive design<br>
+    here is an example:<br>
+    
+<picture>
+    <source srcset="2.jpg" media="(max-width:650px)">
+    <source srcset="3.jpg" media="(max-width:800px)">
+    <img src="1.png " alt="" width="200px" height="200px">
+
+</picture>
 </body>
 </html>
