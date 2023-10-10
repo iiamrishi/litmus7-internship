@@ -132,7 +132,7 @@ BASIC GIT COMMANDS
 
      GIT REBASE
      ----------
-     the rebase updates one branch another by applying the commit on the top of commit of another branch 
+     the rebase updates one branch with  another by applying the commit on the top of commit of another branch 
 
 
 
