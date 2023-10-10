@@ -130,6 +130,9 @@ BASIC GIT COMMANDS
      "git stash list"
      this command will list the stashed files.
 
+     GIT REBASE
+     ----------
+
 
 
 
