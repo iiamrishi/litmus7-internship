@@ -114,6 +114,10 @@ BASIC GIT COMMANDS
      > git revert <commit id> (give this command with the commit id )
      > git push (push this to change in the repo)
 
+     GIT FETCH
+     ----------
+     "git fetch"
+     git fetch command check and give the inforamation if any changes have made in remote repostitory but it will not update in local repository
 
      GIT STASH 
      ----------
