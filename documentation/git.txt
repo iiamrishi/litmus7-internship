@@ -72,7 +72,7 @@ BASIC GIT COMMANDS
 
     GIT CHECKOUT 
     ------------
-    "git checkout <branch name>"
+    "git checkout <branch name>
     this command is used for navigate or switch one branch to another branch
 
     "git checkout -b <branch name>"
