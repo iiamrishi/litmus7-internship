@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS</title>
     <style>
+        .border{
+
+        
+        background-color:darksalmon;border:solid;position: static;
+        }
         body{
             background-color:lightsalmon;
         }
@@ -12,7 +17,7 @@
 </head>
 <body>
     <h2>CSS</H2>
-        <p style="background-color:darksalmon;">
+       <div class="border"> 
         
     CSS is a used to  add style to the html file like font, color,style.css means cascasding style sheets.<br>
     There are 3 diffrent ways the css can impliment.
@@ -21,8 +26,9 @@
     <li>external CSS</li>
     <li>inline CSS</li> 
     </ul>
-        </p>
+        </div>
     <h3>internal CSS</h3>
+    <div class="border"> 
     internal css is the css that is implimented inside the html file using sytle tag<br>
     for example:<br>
     <pre>
@@ -34,24 +40,127 @@
             &lt;/style&gt;   
         </b>
     </pre>
-    here it is an internal css that will give background color as blue.<br>
+  here it is an internal css that will give background color as blue.<br></div>
     <h3>external CSS</h3>
-    External css is the css that is implimented by adding and external .css file to the html file.<br>
+    <div class="border"> 
+        External css is the css that is implimented by adding and external .css file to the html file.<br></p>
     to use external css first you need to create css file with the css code and save as .css file and link to html using:<br>
     <pre>
         <b>
             &lt;link rel="stylesheet" href="style.css" /&gt;
         </b>
-    </pre>
+    </pre></div>
     <h3>inline CSS</h3>
-    Inline css is the css that is implimented by adding css in the same line of the html code.<br>
+    <div class="border"> Inline css is the css that is implimented by adding css in the same line of the html code.<br>
     here is and example for inline CSS
     <pre>
         <b>
             &lt;p style="background-color: aqua;"/&gt;
         </b>
-    </pre>
+    </pre></div>
     <h2>Position Property</h2>
+    <div class="border"> Position Property is the Property in CSS that is used to specify the type of Positioning<br>
+    There are diffrent types of Position Property used.</p> they are:
+    <ul type="circle">
+        <li>Static</li>  
+        <li>relative</li>  
+        <li>fixed</li>
+        <li>sticky</li>
+        <li>absolute</li>
+    </ul></div>
+    <h3>static</h3>
+    <div class="border">
+    in static position Property it does not affect the properties of up, bottom, left or right by default it is static.
+    we can add static position Property by<br>
+    <pre>
+        <b>
+            position: static;
+        </b>
+    </pre></div>
+    <h3>relative</h3>
+    <div class="border">in relative position Property we can set values in top, right, left, bottom. it does not affect the other elements.<br>
+    it can overlap the other elements
+    <pre>
+        <b>
+            {
+            position: relative;
+            top:40px;
+            left:30px;
+            }
+        </b>
+    </pre></div>
+    <h3>fixed</h3>
+    <div class="border">In fixed position Property the element is fixed on the page.we can assign the values like top,bottom,left,right.<br>
+        if we scroll while we used fixed that element will stay at the postion.
+        <pre>
+            <b>
+                position: fixed;
+                top:50px;
+                left:0px;
+            </b>
+        </pre>
+        <h3>sticky</h3>
+        <div class="border">In sticky position property it the combination of static and fixed postion.it remains static until scrolled to specific postion.
+        <pre>
+            <b>
+                position: sticky;
+                top:0;
+            </b>
+        </pre></div>
+        <h3>absolute</h3>
+    <div class="border">
+        In absolute postion property it will go out of the flow.it is relative to the first positioned parent.
+        <pre>
+            <b>
+                position: absolute;
+                top:100px;
+                right:40px;
+            </b>
+        </pre>
+    </div>
+    <h2>Display property</h2>
+    <div class="border">
+    display property is used to define the display of diffrent part in the httml page.<br>
+    some of the dispalay properties are:<br>
+    <ul>
+        <li>block</li>
+        <li>inline</li>
+        <li>inline-block</li>
+        <li>none</li>
+    </ul></div>
+    <h3>block</h3>
+    <div class="border">
+    block is display property that the element will display as block element like p tag. it will display in new line.
+    <pre>
+        <b>
+            display: block;
+        </b>
+    </pre></div>
+    <h3>inline</h3>
+    <div class="border">
+        the inline property in display property will display the elements in same line. the width and height will not have any effect.<br>
+        lt only take the needed width
+        <pre>
+            <b>
+                display: inline;
+            </b>
+        </pre>
+    </div>
+    <h3>inline-block</h3>
+    <div class="border">
+        the inline-block in the display property will display like the inline display property but in this we can adjust the height and width.
+        <pre>
+            <b>
+                display: inline-block;
+            </b>
+        </pre>
+    </div>
+    
+
+
+
+
+    
 
     
 
