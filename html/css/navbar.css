@@ -1,0 +1,15 @@
+.navbar{
+    background-color: slategray;
+    overflow:hidden;
+}
+.navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    
+}
+.topnav a:hover {
+    background-color:green;
+  
+}
