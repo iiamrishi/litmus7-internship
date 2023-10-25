@@ -1,15 +1,17 @@
-.navbar{
+.navbar ul{
     background-color: slategray;
     overflow:hidden;
+    list-style-type: none;/*this is used to remove bullet of list*/
+
 }
 .navbar a {
-    float: right;
-    text-align: center;
+    float: left;
+    text-align:center;
     padding: 10px;
     text-decoration:none ;/*it removes the underline*/
     
 }
-.topnav a:hover {
+.navbar a:hover {
     background-color:green;
   
 }
