@@ -3,10 +3,10 @@
     overflow:hidden;
 }
 .navbar a {
-    float: left;
-    color: black;
+    float: right;
     text-align: center;
     padding: 10px;
+    text-decoration:none ;/*it removes the underline*/
     
 }
 .topnav a:hover {

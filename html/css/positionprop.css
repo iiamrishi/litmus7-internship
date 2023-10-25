@@ -1,0 +1,35 @@
+body{
+    background-color:slategrey;
+    display: flex;
+    justify-content: center;
+
+}
+.border{
+
+    border: 2px solid black ;
+    background-color: whitesmoke;
+    width: 200px;
+    height: 400px;
+   
+}
+
+
+.object{
+    border: solid ;
+    background-color: black;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.border2{
+
+    border: 2px solid black ;
+    background-color: yellow;
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+
+
+    
+}
