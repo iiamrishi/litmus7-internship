@@ -1,17 +1,20 @@
+body{
+    margin: 0px;
+
+}
 .navbar ul{
-    background-color: slategray;
-    overflow:hidden;
+    background-color:darksalmon;
+    overflow:hidden;/*it is used to fit the cntent*/
     list-style-type: none;/*this is used to remove bullet of list*/
 
 }
 .navbar a {
     float: left;
-    text-align:center;
     padding: 10px;
     text-decoration:none ;/*it removes the underline*/
     
 }
 .navbar a:hover {
-    background-color:green;
+    background-color:lightsalmon;
   
 }

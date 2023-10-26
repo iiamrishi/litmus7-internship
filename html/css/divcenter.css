@@ -2,31 +2,10 @@ body{
     background-color:slategrey;
     font-style:italic;
     font-weight: bold;
-
+    display: table;
 }
-.border{
 
-    border: 2px solid black ;
-    position: absolute;
-    width: 340px;
-    height: 450px;
-    display: table; /*this is for table div center*/
-    /*display: flex; /*this is for center using flex*/
-  /*justify-content: center;
-  align-items: center;*/
-   
 
-    }
-
-center{
-    position:absolute;
-  top: 140px; 
-  bottom: 0; 
-  left: 120px;
-  right: 0;
-  margin: auto;
-  height: 50px;
-}
 center{
 position: absolute;
   top: 50%;
@@ -34,21 +13,34 @@ position: absolute;
   transform: translateY(-50%);
 }
 
-.center{
+table{
     display: table-cell;
-  text-align: center;
   vertical-align: middle;
 }
-
 center{
-    margin: auto;
-
-}
-
-.center{
     align-self: center;
   margin: 0 auto;
 }
 
+center{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);/*it is used to move element from position */
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+grid{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
 
 
