@@ -164,6 +164,35 @@
 
 }
 
+.container9{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    height: 100px;
+
+}
+
+
+.itemm{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: gray; 
+    place-self: start;/*place-self is combination of align-self and justify-self*/
+
+}
+.itemn{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: gray; 
+    place-self: end;
+
+
+}
+
+
+
+
 
 
 
