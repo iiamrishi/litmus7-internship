@@ -26,5 +26,149 @@
 .container{
     border: 2px solid blueviolet;
     padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
+    grid-template-rows: 50px 50px;
 
 }
+
+.container1{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
+    grid-template-rows: 50px 50px;
+    row-gap: 10px;
+}
+
+.container2{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    grid-template-columns: repeat(2, 70px);
+    display: grid;
+    justify-items: center;
+}
+
+
+.container3{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    display: grid;
+    height: 100px;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 70px);
+    grid-template-rows: repeat(2, 70px);
+    align-items: start;
+}
+
+
+.container4{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
+    grid-template-rows: repeat(2, 70px);
+    grid-auto-flow: row;
+    align-items: center;
+}
+
+
+.container5{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: row;;
+    grid-template-rows: repeat(2, 50px);
+    place-items: end; /* it sets both justify-items and align-items */
+}
+
+
+.container6{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2,70px);
+
+}
+
+.itema{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: gray;  
+    display: grid; 
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.container7{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: row;
+
+}
+
+.itemb{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: gray; 
+    justify-self: start;  
+}
+.itemc{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: gainsboro;  
+    justify-self: center; 
+}
+.itemd{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: brown;   
+    justify-self: end;
+}
+.iteme{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: chocolate;  
+    justify-self: center;  
+}
+.itemf{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: rgb(83, 22, 22);   
+    justify-self: end;
+}
+
+
+.container8{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    height: 100px;
+
+}
+
+.itemg{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: gray; 
+    align-self: start;
+
+}
+.itemh{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: gray; 
+    align-self: end;
+
+}
+
+
+
+
+
+
+
+
+
