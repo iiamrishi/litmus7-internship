@@ -4,17 +4,127 @@ body{
 }
 .navbar ul{
     background-color:darksalmon;
-    overflow:hidden;/*it is used to fit the cntent*/
+    overflow:hidden;/*it is used to hide to  fit the cntent*/
     list-style-type: none;/*this is used to remove bullet of list*/
+    display: flex;
+    justify-content: space-evenly;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+
 
 }
 .navbar a {
     float: left;
     padding: 10px;
-    text-decoration:none ;/*it removes the underline*/
-    
+    text-decoration:none;/*it removes the underline*/
 }
 .navbar a:hover {
     background-color:lightsalmon;
   
 }
+.item{
+    border: 2px solid black;
+    padding: 4px;
+    background-color: brown;
+    
+}
+.container{
+    border: 2px solid blueviolet;
+    padding: 30px;
+    justify-content:flex-start;
+    display: flex;
+
+
+}
+.container1{
+    border: 2px solid blueviolet;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container2{
+    border: 2px solid blueviolet;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.container3{
+    border: 2px solid blueviolet;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 119px;
+}
+
+.container4{
+    border: 2px solid blueviolet;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 119px;
+}
+
+.container5{
+    border: 2px solid blueviolet;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    column-gap: 30px;
+    height: 119px;
+}
+
+.container6{
+    border: 2px solid blueviolet;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    column-gap: 30px;
+    height: 119px;
+}
+.item9{
+    background-color:yellow;
+    order: 2;
+    
+}
+.item8{
+    background-color:yellow;
+    
+}
+.item7{
+    background-color:yellow;
+
+    
+}
+.item6{
+    background-color:yellow;
+
+    
+}
+.item5{
+    background-color:yellow;
+    display: flex;
+    flex-grow: 3;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
