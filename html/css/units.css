@@ -1,0 +1,38 @@
+.item1{
+    background: darksalmon; 
+    border: 1px solid black; 
+    margin: 20px; 
+}
+
+.item2{
+    background: darksalmon; 
+    border: 1px solid black; 
+    width: 50%;
+}
+
+.item3{
+    background: darksalmon; 
+    border: 1px solid black; 
+    width: 50vw;
+}
+
+
+.item4{
+    background: darksalmon; 
+    border: 1px solid black; 
+    height: 50vh;
+}
+
+.item5 { 
+    font-size: 3rem; 
+} 
+
+.item6 { 
+    font-size: 3em; 
+} 
+
+.container{
+    border: 2px solid black;
+    font-size: 30px;
+}
+
