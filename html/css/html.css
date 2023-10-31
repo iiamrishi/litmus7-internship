@@ -1,0 +1,231 @@
+body{
+    background-color: #c9d9eb;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.navbar ul{
+    background-color:#00ABE4;
+    overflow:hidden;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+}
+
+.navbar a {
+    float: left;
+    padding: 10px;
+    text-decoration:none;
+}
+
+.navbar a:hover {
+    background-color:#c9d9eb;
+    border-radius: 10px;
+}
+
+.htmltag{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+}
+.htmltag:target {
+    animation: blink .4s;
+    animation-delay: .3s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+.meta{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+.meta:target {
+    animation: blink .4s;
+    animation-delay: .3s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+.voidelements{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+.voidelements:target {
+    animation: blink .4s;
+    animation-delay: .3s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+.entities{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+    margin-top: 5px;
+}
+.entities:target {
+    animation: blink .4s;
+    animation-delay: .3s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+.semanticandnon{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+.semanticandnon:target {
+    animation: blink .4s;
+    animation-delay: .4s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+.nonsematic{
+    border: 2px solid #c9d9eb;
+    border-radius: 10px;
+    background-color: #c9d9eb;
+
+}
+.nonsematic:target {
+    animation: blink .4s;
+    animation-delay: .3s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+.nonsemhead{
+    border: 2px solid #00ABE4;
+    border-radius: 7px;
+    display: flex;
+    width: fit-content;
+    background-color: #00ABE4;
+    margin-left: 10px;
+
+
+}
+
+.formatting{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+.formatting:target {
+    animation: blink .4s;
+    animation-delay: .4s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+
+.list{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+    margin-top: 5px;
+}
+.list:target {
+    animation: blink .4s;
+    animation-delay: .5s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+
+.anchor{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+    margin-top: 5px;
+    
+}
+.anchor:target {
+    animation: blink .4s;
+    animation-delay: .6s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+.picture{
+    border: 2px solid #00abe4;
+    border-radius: 10px;
+    background-color: #00ABE4;
+    padding: 10px;
+    margin-top: 5px;
+}
+.picture:target {
+    animation: blink .4s;
+    animation-delay: .7s;
+
+  }
+  @keyframes blink{
+    50%{
+        opacity: 0;
+    }
+  }
+
+.highlight{
+    border: 1px solid #c9d9eb;
+    border-radius: 10px;
+    display: flex;
+    width: fit-content;
+    padding-right: 20px;
+    background-color: #c9d9eb;
+
+}
+
+pre{
+    text-wrap: wrap;
+}
+
+html{
+    scroll-behavior: smooth;
+}

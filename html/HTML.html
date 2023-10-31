@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="meta is metadata; metadata is the data about the data, metadata will not be visible in the main data">
-    <meta http-equiv="refresh" content="50">
+    <meta http-equiv="refresh" content="500">
 
     
     <title>this is the title</title> <!--it gives the title -->
+    <link rel="stylesheet" href="css/html.css">
 </head>
 <body><!--the body tag is where you write the content-->
-    <h3>HTML TAGS</h3><hr><br><!--this "br" tag is example of void element it does not have a closing tag -->
+    <nav class="navbar">
+        <ul>
+        <li><a href="#HTMLTAGS">HTML</a></li>
+        <li><a href="#METATAGS">META TAGS</a></li>
+        <li><a href="#void">VOID ELEMENTS</a></li>
+        <li><a href="#ENTITIES">ENTITIES</a></li>
+        <li><a href="#SEMATICSANDNONSEMANTICS">SEMANTIC AND NON SEMANTIC</a></li>
+        <li><a href="#FORMATTING">FORMATTING TAGS</a></li>
+        <li><a href="#LIST">LIST TAGS</a></li>
+        <li><a href="#ANCHOR">ANCHOR TAGS</a></li>
+        <li><a href="#PICTURE">PICTURE TAGS</a></li>
+        </ul>
+       </nav> 
+       <div id="HTMLTAGS" class="htmltag">
+    <h3>HTML TAGS</h3><br><!--this "br" tag is example of void element it does not have a closing tag -->
    The HTML tags are the keywords that used to create webpage. the HTML tags usually have opening tag and closing tag and some does not have closing tags.<br>
    the syntax for HTML tags:<br>
-   <pre><!--the <pre> tag is called preformatting tag it shows exactly what is written-->
+   <pre class="highlight"><!--the <pre> tag is called preformatting tag it shows exactly what is written-->
     &lt;tag&gt;&lt;/tag&gt; <!--the &lt; and &gt; is an example how to inserts certain symbols in HTML-->
    </pre>
    <h3>!DOCTYPE</h3>
    !DOCTYPE is an instruction that tells the web browser about the markup language in which the current page is written.It is used in HTML 5.<br>
-
-   <h3>META TAG</h3>
+</div>
+<div id="METATAGS" class="meta">
+   <h3 >META TAG</h3>
    meta tags are the tags that used to give information about the webpage. the meta tags are written in head tag.<br>
    these are some use of meta tag like<br>
    <ul>
@@ -29,9 +45,11 @@
     <li>author</li>
    </ul>
    an example of usage of meta tags :<br>
-   <pre>
+   <pre class="highlight">
     &lt;meta charset ="UTF-8"&gt;
    </pre>
+</div>
+    <div id="void" class="voidelements">
    <h3>VOID ELEMENTS</h3>
    void elements are the elements which only have opening tag and closing tag is not specified.<br>
    some of the void elements are :<br>
@@ -49,15 +67,19 @@
   <li><b>&lt;img&gt;</b><br></li>
   the img tag is used to insert image.
    </ul>
+</div>
+<div  id="ENTITIES" class="entities">
    <h3>ENTITIES</h3>
    entiies in HTML are the set of characters used to represent the reserved characters in HTML. <br>
    some of the entities are:<br>
-   <pre>(*do not need the space between &)
+   (*do not need the space between &)
+   <pre class="highlight">
    & lt; - "<"
    & gt; - ">"
    & quot; - "
    </pre>
-
+</div>
+    <div  id="SEMATICSANDNONSEMANTICS" class="semanticandnon">
    <h3>SEMATIC ELEMENTS</h3>
    sematic elements are the elements which describes the meaning clearly. there are many sematic tags available in HTML.<br>
    some of them are:<br>
@@ -73,8 +95,8 @@
     <li><b>&lt;nav&gt;</b><br></li> 
     the nav tag defines the set of navigation links
    </ul>
-
-   <h3>NON SEMATIC ELEMENTS</h3>
+   <div class="nonsematic">
+   <h3 class="nonsemhead">NON SEMATIC ELEMENTS</h3>
    non sematic elements are the elements does not describe the meaning clearly unlike the sematic elements<br>
    example of non semantic tags are:<br>
    <ul>
@@ -83,7 +105,9 @@
     <li><b>&lt;span&gt;</b><br></li> 
     the span tag is used to group elements for syling purpose.
    </ul>
-
+</div>
+</div>
+    <div   id="FORMATTING" class="formatting">
    <h3>FORMATTING TAG</h3>
    formatting tags are the tags that are used to display the special type os text.<br>
    some of the formatting tags are:<br>
@@ -101,7 +125,8 @@
     <li>this is<sub>superscripted</sub></li>
     <b>&lt;sub&gt;&lt;/sub&gt;</b> tag is used for making subscriptted text
     </ul>
-
+</div>
+    <div id="LIST" class="list">
     <h3>LIST IN HTML</h3>
     there are two types of list in html.<br>
     <ol>
@@ -110,7 +135,7 @@
     </ol>
     unorderd list is the list that is listed using dot or square or circle dot<br>
     syntax:<br>
-    <pre>
+    <pre class="highlight">
         &lt;ul&gt;
         &lt;li&gt;&lt;content&gt;&lt;/li&gt;
         &lt;li&gt;&lt;conetnt&gt;&lt;/li&gt;
@@ -119,26 +144,28 @@
 
     ordered list is the list that is listed useing numericals like roman numericals or numbers.<br>
     syntax:<br>
-    <pre>
+    <pre class="highlight">
         &lt;ol&gt;
         &lt;li&gt;&lt;content&gt;&lt;/li&gt;
         &lt;li&gt;&lt;conetnt&gt;&lt;/li&gt;
         &lt;/ol&gt;
     </pre>
-
+</div>
+    <div id="ANCHOR" class="anchor">
     <h3>ANCHOR TAG</h3>
     anchor tag is the tag used for hyperlinking.<br>
     here is an example of using the anchor tag:<br>
     <a href ="https://www.w3schools.com/html/html5_semantic_elements.asp"title="sematic elemennts"target="_blank" >sematic element referance</a><br>
     this is how i used hyperlink ,let me explain:
-    <pre>
+    <pre class="highlight">
     &lt;a href ="https://www.w3schools.com/html/html5_semantic_elements.asp"title="sematic elemennts"target="_blank" &gt;sematic element referance&lt;/a&gt;
     </pre>
 
     in this line we can see that &lt;a&gt; tag is the anchor tag and in  &quot;hreff&quot; we add the url or link where it is linked. <br>
     the &quot;title&quot; we give the name , in &quot;target&quot; is when we can change where it should open link in the same window or new tab here it will open in new tab.
-
-    <h3>IMG TAG AND PICTURE TAG</h3>
+</div>
+<div id="PICTURE" class="picture">
+    <h3 >IMG TAG AND PICTURE TAG</h3>
     the img tag is used to insert the images.<br>
     the picture tag is similar as img tag but picture tag give the responsive design<br>
     here is an example:<br>
@@ -149,5 +176,6 @@
     <img src="1.png " alt="" width="200px" height="200px">
 
 </picture>
+</div>
 </body>
 </html>
