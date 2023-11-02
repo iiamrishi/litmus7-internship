@@ -1,0 +1,31 @@
+img{
+    background-image: url(https://images.freeimages.com/variants/YSotMxjHEvoFiBGaZkkJv5K8/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=350);
+    background-repeat: repeat-x;
+    
+    
+}
+
+  
+  @media (max-width: 650px){
+    img{
+      background-image: url("../1.png");
+      object-fit: cover;
+      
+    }
+    
+  }
+
+  .box{
+
+    border: 2px solid darkgrey;
+    background-color: darkgray;
+    width:500px;
+
+
+  }
+  .image{
+    object-fit: fill;
+    width: 100%;
+    height: 150px;
+
+  }
