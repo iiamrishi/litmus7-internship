@@ -129,7 +129,21 @@ processData();
 /*Any function that is passed as an argument to another function
  so that it can be executed in that other function is called as a callback function*/
 
-
+ function mainFunction(callback) {
+    console.log("Performing operation...");
+    // Use setTimeout to simulate an asynchronous operation
+    setTimeout(function() {
+      callback("Operation complete");
+    }, 1000);
+  }
+   
+  // Define the callback function
+  function callbackFunction(result) {
+    console.log("Result: " + result);
+  }
+   
+  // Call the main function with the callback function
+  mainFunction(callbackFunction);
 
 
 
@@ -318,3 +332,77 @@ function sum(){
 }
 b(sum);
   
+
+//setTimeout simple example
+
+function a(){
+    setTimeout(function(){//this funtion create closure
+        console.log(10);
+    },2000);
+    console.log("hii")//does not wait for setTimeout
+}
+a();
+
+
+//another exampleof setTimeout to print number upto 5 
+
+function a(){
+    for(let i=1;i<=5;i++)
+   setTimeout (function(){
+   console.log(i);
+   },i*2000);
+}
+   a();
+
+
+// print same as above using var and without let
+
+function a(){
+    for(var i=1;i<=5;i++){
+    function close(i){//wrap with this function to work this
+   setTimeout (function(){
+   console.log(i);
+   },i*2000);
+    }
+   close (i);
+    }
+     
+}
+ a();
+ 
+
+
+ //iife example
+
+
+ for(var i=1;i<=5;i++)
+{
+    (function(i)
+{
+     setTimeout(function()
+    {
+        console.log(i);
+        
+    },i*1000);
+})(i);
+    
+}
+
+
+////
+var flag=true;
+setTimeout(function(){
+    flag=false;
+},5000);
+while(flag)
+{
+    console.log("rishi")
+}
+
+
+///example for eventloop
+console.log("hello")
+  setTimeout(function(){
+        console.log(10);
+    },2000);
+    console.log("hii")
