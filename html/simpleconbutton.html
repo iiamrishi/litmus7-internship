@@ -8,31 +8,32 @@
 </head>
 <body>
     <div class="box">
-        <form>
-            <input class="minus" type="button" value="-" onclick="decrement()">
-        </form>
-        <form>
-            <input class="text" type="text" value="" onclick="increment()">
-        </form>
+     <button onclick="decrement()">-</button>
+    <input type="text" id="textbox">
+     <button onclick="increment()">+</button>
+</div>
 
-        <form>
-            <input class="plus" type="button" value="+">
-        </form>
-
-    </div>
     <script lang="JavaScript">
-       function decrement(){
-        Number--;
-        updateNumber()
-       } 
-       function increment(){
-        Number++;
-        updateNumber()
-       }
-       function updateNumber(){
-        document.getElementsByClassName()
-       }
+        let number = 0;
+
+function increment() {
+    number++;
+    updateNumber();
+}
+
+function decrement() {
+    number--;
+    updateNumber();
+}
+
+function updateNumber() {
+    document.getElementById("textbox").value = number;
+}
+       
 
     </script>
 </body>
 </html>
+
+
+
