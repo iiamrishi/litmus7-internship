@@ -508,3 +508,49 @@ const value= user();
  const value2 = value.getname();
  (value2.lastname());
 
+
+
+
+/// call, apply, bind
+
+let name={
+    firstname: "rishiraj",
+    lastname: "babu",
+   
+    }
+    let fullname = function(hometown, state){
+        console.log(this.firstname+ " "+this.lastname+ " from "+hometown+" "+ state)
+    
+}
+fullname.call(name,"angamaly","kerala");
+
+let name2={
+    firstname: "rishi",
+    lastname: "raj",
+}
+fullname.call(name2,"kerala","india");
+fullname.apply(name2,["kerala","india"]);// in apply we pass argument in array
+
+//bind
+let myfullname = fullname.bind(name2,"kerala","india");//it create a copy of fullname and bind that to name2 object and return a function
+console.log(myfullname);
+myfullname();
+
+
+//simple example of bind
+let name={
+    firstname: "rishiraj",
+    lastname: "babu",
+   
+    }
+    let fullname = function(){
+        console.log(this.firstname+ " "+this.lastname)
+    
+}
+let myname= fullname.bind(name);
+myname();
+
+
+
+/////polyfill bind
+
