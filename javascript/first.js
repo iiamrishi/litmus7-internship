@@ -406,3 +406,105 @@ console.log("hello")
         console.log(10);
     },2000);
     console.log("hii")
+
+
+//// "this" refers to the object that is responsible for exicuting function
+
+/// an example of this
+
+let user= {
+    firstname : "rishiraj",
+    lastname : "babu",
+    fullname : function(){
+        //console.log(this)
+        console.log (this.firstname +" " +this.lastname);
+    }
+    
+}
+user.fullname();
+
+
+////// another example of this
+
+
+const user={
+    name: "john",
+    age: 25,
+    career:{
+        employer:"google",
+        title: "developer",
+        info(){
+            console.log(this.name + " is a " + this.title +" at "+ this.employer);//print "undifiend is a developer at google"
+        }//the reason is that this name refer to object career
+        
+    }
+
+}
+user.career.info();
+
+
+//call in this
+
+let name={
+    firstname: "rishiraj",
+    lastname: "babu",
+    fullname: function(){
+        console.log(this.firstname+ " "+this.lastname)
+    }
+    
+}
+name.fullname();
+
+let name2={
+    firstname: "rishi",
+    lastname: "raj",
+}
+name.fullname.call(name2);
+
+
+///bind
+const myobj={
+    a: 1,
+    b:2,
+    c: function(){
+        console.log(this.a + this.b);
+    }
+    
+}
+myobj.c = myobj.c.bind(myobj);
+var k= myobj.c;
+k();
+
+
+function user(){
+    return {
+        name: "rishi",
+        function getname(){
+            console.log(this.name)
+        }
+    }
+}
+const value= user.getname();
+
+
+
+/////////////////////////
+function user(){
+    return {
+        name: "rishi",
+         getname(){
+             return {
+                 name: "danush", //does not print because arrow looks the parent fn
+                  lastname:()=>{ //here uses name bcasue it refers to parent fn only in case of arrow fn
+             console.log(this.name)
+             }
+             }
+       
+        }
+    }
+}
+
+const value= user();
+ const value2 = value.getname();
+ (value2.lastname());
+
