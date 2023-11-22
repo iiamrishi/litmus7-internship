@@ -554,3 +554,21 @@ myname();
 
 /////polyfill bind
 
+let name={
+    firstname:"rishiraj",
+    lastname:"babu"
+}
+
+function fullname(city1, city2){
+    console.log(this.firstname+" " + this.lastname+ " lives in "+city1+" ,"+city2);
+}
+
+Function.prototype.Mybind = function(obj,...args1){
+      const fun = this;
+    return function(...args2){
+        return fun.apply(obj,[...args1,...args2]);
+      
+    }
+}
+const bindName = fullname.Mybind(name,"kerala");
+bindName("india");
