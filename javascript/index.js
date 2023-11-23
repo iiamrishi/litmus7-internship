@@ -30,6 +30,7 @@ let  num= {
 
 }
 let num2={...num}// this line take the values inside the object num rather than the whole object
+num2.d=4;
 console.log(num);
 console.log(num2)
 
@@ -94,6 +95,16 @@ let OB1={...OB}
 OB.D=25;//this value does not show in OB object because what is realy doing is creating a copy so 
 OB.C.Name= "danush"//the only reference is passing
 console.log(OB,OB1);
+
+
+
+////rest
+
+function test(a,b,...rest){
+    console.log(a,b,rest);
+}
+test(5,10,23,22,69);
+
 
 
 
