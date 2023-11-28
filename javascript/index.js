@@ -92,7 +92,7 @@ let OB={
 
 }
 let OB1={...OB}
-OB.D=25;//this value does not show in OB object because what is realy doing is creating a copy so 
+OB.D=25;//this value does not show in OB object because what is really doing is creating a copy so 
 OB.C.Name= "danush"//the only reference is passing
 console.log(OB,OB1);
 
@@ -104,6 +104,14 @@ function test(a,b,...rest){
     console.log(a,b,rest);
 }
 test(5,10,23,22,69);
+
+
+///strict mode restrictions
+'use strict';
+foo = 12//use var , let or const to avoid error
+console.log(foo)//it will getv error because variable should be defined in strict mode
+
+//
 
 
 

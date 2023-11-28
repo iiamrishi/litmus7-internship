@@ -572,3 +572,75 @@ Function.prototype.Mybind = function(obj,...args1){
 }
 const bindName = fullname.Mybind(name,"kerala");
 bindName("india");
+
+
+////filter()
+const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);//print words with greater than 6 length
+
+
+//map()
+const array1 = [1, 2, 3, 4];
+
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);//prints the multiplied value
+
+///reduce
+const number=[10,20,30];
+const sum= number.reduce((total,num)=>{
+    return total + num},0);
+console.log(sum);
+
+
+//slice
+const fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi'];
+
+// Extracting elements from index 1 to 3 (exclusive)
+const slicedFruits = fruits.slice(1, 4);
+
+console.log(slicedFruits);//print banana,orange,grape
+
+
+////////// filter()
+const words =['spray', 'elite', 'exuberant', 'destruction', 'present'];
+let obj={
+    a:1,
+    b:2,
+    c:3,
+    d:4,
+    
+    
+}
+let obj2={...obj,c:5,d:6
+    
+}
+let obj3={
+    ...obj,a:3,b:4
+}
+let obj4={
+    ...obj,b:6,c:7
+}
+
+const arr=[obj,obj2,obj3,obj4]
+const equalToOne= (object,index,rishi)=> {//equalToOne= callback fn
+   console.log('this is ',object)
+   console.log('this is index ',index)
+   console.log('this is rishi',rishi)
+    if(object.a===1)
+     return true
+     else
+     return false
+     
+  
+}
+//console.log(equalToOne(obj3));
+const re= arr.filter(equalToOne)
+console.log(re)
+//const sum =(word) => word.length > 6
+//const result = words.filter(sum);
+//console.log(result);//print words with greater than 6 length
+
