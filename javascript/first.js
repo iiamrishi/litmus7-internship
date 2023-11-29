@@ -644,3 +644,32 @@ console.log(re)
 //const result = words.filter(sum);
 //console.log(result);//print words with greater than 6 length
 
+
+
+
+////////////
+const re1=arr.filter((object,index,rishi)=> {//equalToOne= callback fn
+    console.log('this is ',object)
+    console.log('this is index ',index)
+    console.log('this is rishi',rishi)
+     if(object.a===1)
+      return true
+      else
+      return false
+      
+   
+ })
+
+
+ ////map()
+const array1 = [1, 2, 3, 4];
+const map1 = array1.map((x, index, rishi) => {
+    console.log('current element is', x)
+    console.log('index is', index)
+    console.log('array is', rishi)
+    return x * 2
+});
+
+console.log(map1);
+
+

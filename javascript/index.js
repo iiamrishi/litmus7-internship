@@ -113,6 +113,3 @@ console.log(foo)//it will getv error because variable should be defined in stric
 
 //
 
-
-
-
