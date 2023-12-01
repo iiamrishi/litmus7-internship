@@ -1,21 +1,25 @@
-
+/////toSpliced
+//-------------
 // let numbers=[5,3,4,1,2]
-// let sortnum= numbers.toSpliced(1,2,7);
+//  let sortnum= numbers.toSpliced(1,2,7);
 // console.log(sortnum);
+// console.log('og array',numbers)
 
-// let numbers=[5,3,4,1,2]
-//  numbers.splice(0,0,6);
-// console.log(numbers);
-
+//slice()
+//----------
 let numbers=[5,3,4,1,2]
- let newn=numbers.slice(0,5).sort();
-console.log(newn);
+let newin=numbers.slice(0,4)//(start,end) end is excluded
+console.log(newin);
 
 
 // let numbers=[5,3,4,1,2]
-// let sortnum= numbers.sort().reverse();
+// let sortnum= numbers.sort();
 // console.log(sortnum);
 
 
+//splice
+// let a= [1,2,6,4,5];
+// let b=a.splice(2,1,3)//(start,countvalue,newvalue)
+// console.log(a);
 
 

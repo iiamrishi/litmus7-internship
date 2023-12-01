@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color:#EAEBEC ;
+    
+
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #3A4655;
+    border: 2px solid #3A4655;
+    border-radius: 20px;
+    padding-bottom: 10%;
+    padding-right: 3%;
+    padding-left: 3%;
+    
+}
+#text{
+  height: 60px;
+  margin-top:20px;
+  border-radius: 10px;
+  background-color:#EAEBEC ;
+  color: #727b86 ;
+  font-size: 20px;
+  font-weight:800;
+}
+.digitstyle{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color:  #727B86;
+    color: blanchedalmond;
+
+}
+.digitstyle:hover{
+    background: #E0B612;
+}
+
+#zero{
+    height: 50px;
+    width: 103px;
+    border-radius: 10px;
+    background-color:  #727B86;
+    color: blanchedalmond;
+}
+#zero:hover{
+    background: #E0B612;
+}
+
+
+
+#clear{
+    height: 50px;
+    width: 103px;
+    border-radius: 10px;
+    background-color:  #727B86;
+    color: blanchedalmond;
+}
+#clear:hover{
+    background: #E0B612;
+}
+#equalto{
+    height: 50px;
+    width: 110px;
+    border-radius: 10px;
+    background-color:  #727B86;
+    color: blanchedalmond;
+}
+#equalto:hover{
+    background: #E0B612;
+}
+
+
+.buttons{
+    margin-bottom: -8em;
+    background-color: #3A4655  ;
+
+}
+.digitsContainer{
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    column-gap: 20px
+}
+.otherContainer{
+    display: grid;
+    grid-template-columns: 100px 40px 40px 40px;
+    column-gap: 20px
+
+}
+
+.clearAndEqualto{
+    display: grid;
+    grid-template-columns: 100px 40px 40px 40px;
+    column-gap: 20px
+
+}

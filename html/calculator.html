@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="../html/css/calculator.css">
+    <script src="../javascript/../javascript/calculator.js" defer></script>
+</head>
+<body>
+    <div class="box">
+        <input type="text" id="text"><br>
+        <div class="buttons">
+            <div class="digitsContainer">
+        <button id="one" class="digitstyle" onclick=buttonclick(1)>1</button>
+        <button id="two"class="digitstyle" onclick=buttonclick(2)>2</button>
+        <button id="three"class="digitstyle" onclick=buttonclick(3)>3</button>
+        <button id="plus"class="digitstyle" onclick=buttonclick('+')>+</button>
+        <button id="four"class="digitstyle" onclick=buttonclick(4)>4</button>
+        <button id="five"class="digitstyle" onclick=buttonclick(5)>5</button>
+        <button id="six"class="digitstyle" onclick=buttonclick(6)>6</button>
+        <button id="minus"class="digitstyle" onclick=buttonclick('-')>-</button>
+        <button id="seven"class="digitstyle" onclick=buttonclick(7)>7</button>
+        <button id="eight"class="digitstyle" onclick=buttonclick(8)>8</button>
+        <button id="nine"class="digitstyle" onclick=buttonclick(9)>9</button>
+        <button id="multiply"class="digitstyle" onclick=buttonclick('*')>*</button>
+          </div>
+          <div class="otherContainer">
+        <button id="zero" onclick="buttonclick(0)">0</button>
+        <button id="dot" class="digitstyle" onclick="buttonclick('.')" >.</button>
+        <button id="divide"class="digitstyle" onclick="buttonclick('/')">/</button><br>
+      </div>
+      <div class="clearAndEqualto">
+        <button id="clear" onclick="clr()">clear</button>
+        <button id="equalto" onclick="('=')">=</button>
+    </div>
+    
+    </div>
+    </div>
+    
+</body>
+</html>
