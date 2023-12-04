@@ -16,7 +16,6 @@ body{
     border: 2px solid #3A4655;
     border-radius: 20px;
     padding-bottom: 10%;
-    padding-right: 3%;
     padding-left: 3%;
     
 }
@@ -28,6 +27,7 @@ body{
   color: #727b86 ;
   font-size: 20px;
   font-weight:800;
+  width: 230px;
 }
 .digitstyle{
     height: 50px;
@@ -95,7 +95,7 @@ body{
 
 .clearAndEqualto{
     display: grid;
-    grid-template-columns: 100px 40px 40px 40px;
+    grid-template-columns: 100px 40px;
     column-gap: 20px
 
 }

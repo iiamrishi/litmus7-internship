@@ -1,24 +1,21 @@
-
+let textInput = document.getElementById('text');
 function buttonclick(e){
-    document.getElementById('text').value+= e;
+    textInput.value+= e;
+}
+function operation(oper){
+    textInput.value+=oper
 }
 function clr(){
-document.getElementById('text').value= " ";
+    textInput.value= " ";
 }
-function equalTo(){
-   document.getElementById('text').value
+// function equalTo(){
+//    textInput.value= eval(textInput.value);
+// }
 
-}
+// function equalTo() {
+//     let 
+//     for()
+// }
 
-function plus(a){
-    document.getElementById('text').value+= a
-}
-function minus(a){
-    document.getElementById('text').value+= a
-}
-function multiply(a){
-    document.getElementById('text').value+= a
-}
-function divide(a){
-    document.getElementById('text').value+= a
-}
+
+
