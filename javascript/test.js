@@ -7,9 +7,9 @@
 
 //slice()
 //----------
-let numbers=[5,3,4,1,2]
-let newin=numbers.slice(0,4)//(start,end) end is excluded
-console.log(newin);
+// let numbers=[5,3,4,1,2]
+// let newin=numbers.slice(0,4)//(start,end) end is excluded
+// console.log(newin);
 
 
 // let numbers=[5,3,4,1,2]
@@ -23,3 +23,4 @@ console.log(newin);
 // console.log(a);
 
 
+ 
