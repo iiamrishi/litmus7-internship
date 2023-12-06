@@ -6,7 +6,7 @@ function operation(oper){
     textInput.value+=oper
 }
 function clr(){
-    textInput.value= " ";
+    textInput.value= "";
 }
 
 function applyOperator(operators, operands) {
@@ -65,8 +65,9 @@ function equalTo() {
 
     return operands[0];
   }
-
-  textInput.value=evaluateExpression(expression)
+  evaluateExpression(expression);
+  console.log(evaluateExpression(expression));
+  textInput.value=evaluateExpression(expression);
 }
 
     
