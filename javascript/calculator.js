@@ -48,7 +48,7 @@ function equalTo() {
     for (const token of expression) {
       if (!isNaN(token)) {
         operands.push(parseFloat(token));
-      } else {
+      } else { 
         // while (
         //   operators.length > 0 &&
         //   hasHigherPrecedence(operators[operators.length - 1], token)
@@ -66,8 +66,7 @@ function equalTo() {
     return operands[0];
   }
 
-  evaluateExpression(expression);
-  textInput.value=(evaluateExpression(expression))
+  textInput.value=evaluateExpression(expression)
 }
 
     
