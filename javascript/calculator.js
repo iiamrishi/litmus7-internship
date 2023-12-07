@@ -9,15 +9,15 @@ function clr(){
     textInput.value= "";
 }
 
-function applyOperator(operators, operands) {
-    const operator = operators.pop();
-    const operand2 = operands.pop();
-    const operand1 = operands.pop();
+function applyOperator(operators, operands) { // operator= +, operand= 1,2
+    const operator = operators.pop();//operator = +
+    const operand2 = operands.pop();//operand2= 2
+    const operand1 = operands.pop();//operans1= 1
   
            // Perform the operation based on the operator and push the result onto the operands stack
     switch (operator) {
       case '+':
-        operands.push(operand1 + operand2);
+        operands.push(operand1 + operand2);// 10+20
         break;
       case '-':
         operands.push(operand1 - operand2);
@@ -31,44 +31,42 @@ function applyOperator(operators, operands) {
     }
   }
   
-          // Function to check if the first operator has higher or equal precedence than the second operator
-  function hasHigherPrecedence(operator1, operator2) {
-    // const precedence = { '+': 1, '-': 1, '*': 2, '/': 2 };
-    // return precedence[operator1] >= precedence[operator2];
-    return false;
-  }//always return false
-
 function equalTo() {
-  var expression = textInput.value;
+  var expression = textInput.value; // 10+20
 
   function evaluateExpression(expression) {
     const operators = [];
     const operands = [];
+    let currentNumber = '';
 
     for (const token of expression) {
+      //console.log('token',token) // 10+20
       if (!isNaN(token)) {
-        operands.push(parseFloat(token));
-      } else { 
-        // while (
-        //   operators.length > 0 &&
-        //   hasHigherPrecedence(operators[operators.length - 1], token)
-        // ) {
-        //   applyOperator(operators, operands);
-        // }
-        operators.push(token);
+        currentNumber = currentNumber + token;
+        //console.log(currentNumber)
+      }else if('+-*/'.includes(token)){ //if the string '+-*/' contains token 
+       if (currentNumber !== '') { //if currentNumber not equal to string '' then
+        operands.push(parseFloat(currentNumber));//the currentNumber is parsefloated and pushed to operands
+        //console.log(operands)
+        currentNumber = ''; // Reset the currentNumber
       }
+      operators.push(token);//+
     }
-
-    while (operators.length > 0) {
-      applyOperator(operators, operands);
-    }
-
-    return operands[0];
   }
-  evaluateExpression(expression);
-  console.log(evaluateExpression(expression));
-  textInput.value=evaluateExpression(expression);
+    if (currentNumber !== '') {// this if for remaining operands if there any and then
+      operands.push(parseFloat(currentNumber));//currentNumber is pushed to operands
+      //console.log(operands)
+    } 
+  //console.log(operands)
+  while (operators.length > 0) {
+    applyOperator(operators, operands);
+  }
+
+  return operands[0];
 }
+textInput.value = evaluateExpression(expression);
+}
+
 
     
 
