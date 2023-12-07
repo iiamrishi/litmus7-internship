@@ -1,74 +1,73 @@
 let textInput = document.getElementById('text');
-function buttonclick(e){
-    textInput.value+= e;
+function buttonclick(e) {
+  textInput.value += e;
 }
-function operation(oper){
-    textInput.value+=oper
+function operation(oper) {
+  textInput.value += oper
 }
-function clr(){
-    textInput.value= "";
+function clr() {
+  textInput.value = "";
 }
 
 function applyOperator(operators, operands) { // operator= +, operand= 1,2
-    const operator = operators.pop();//operator = +
-    const operand2 = operands.pop();//operand2= 2
-    const operand1 = operands.pop();//operans1= 1
-  
-           // Perform the operation based on the operator and push the result onto the operands stack
-    switch (operator) {
-      case '+':
-        operands.push(operand1 + operand2);// 10+20
-        break;
-      case '-':
-        operands.push(operand1 - operand2);
-        break;
-      case '*':
-        operands.push(operand1 * operand2);
-        break;
-      case '/':
-        operands.push(operand1 / operand2);
-        break;
-    }
+  //operators=[+],operands=[123,234] 
+  const operator = operators.pop();//operator = +
+  const operand2 = operands.pop();//operand2= [123,234]
+  const operand1 = operands.pop();//operans1= 3
+  // Perform the operation based on the operator and push the result onto the operands stack
+  switch (operator) {
+    case '+':
+      operands.push(operand1 + operand2);// [123+234]
+      break;
+    case '-':
+      operands.push(operand1 - operand2);
+      break;
+    case '*':
+      operands.push(operand1 * operand2);
+      break;
+    case '/':
+      operands.push(operand1 / operand2);
+      break;
   }
-  
+}
+
 function equalTo() {
-  var expression = textInput.value; // 10+20
+  var expression = textInput.value; // 123+234
 
   function evaluateExpression(expression) {
-    const operators = [];
-    const operands = [];
-    let currentNumber = '';
-
+    const operators = [];//+
+    const operands = [];//[123234]
+    let currentNumber = '';//''
     for (const token of expression) {
-      //console.log('token',token) // 10+20
+      //console.log('token',token) // 123+234
       if (!isNaN(token)) {
         currentNumber = currentNumber + token;
         //console.log(currentNumber)
-      }else if('+-*/'.includes(token)){ //if the string '+-*/' contains token 
-       if (currentNumber !== '') { //if currentNumber not equal to string '' then
-        operands.push(parseFloat(currentNumber));//the currentNumber is parsefloated and pushed to operands
-        //console.log(operands)
-        currentNumber = ''; // Reset the currentNumber
+      } else if ('+-*/'.includes(token)) { //if the string '+-*/' contains token 
+        if (currentNumber !== '') { //if currentNumber not equal to string '' then
+          operands.push(parseFloat(currentNumber));//the currentNumber is parsefloated and pushed to operands
+          //console.log(operands)
+          currentNumber = ''; // Reset the currentNumber
+        }
+        operators.push(token);//+
       }
-      operators.push(token);//+
-    }
-  }
+    }//operators=['+'], operands=[123]
     if (currentNumber !== '') {// this if for remaining operands if there any and then
-      operands.push(parseFloat(currentNumber));//currentNumber is pushed to operands
+      operands.push(parseFloat(currentNumber));//[234]//currentNumber is pushed to operands
       //console.log(operands)
-    } 
-  //console.log(operands)
-  while (operators.length > 0) {
-    applyOperator(operators, operands);
+    }//[123,234]
+    //console.log(operands)
+    while (operators.length > 0) {
+      applyOperator(operators, operands);
+    }
+
+    return operands[0];//return the value to evaluateExpression
   }
-
-  return operands[0];//return the value to evaluateExpression
-}
-textInput.value = evaluateExpression(expression);
+  textInput.value = evaluateExpression(expression);
 }
 
 
-    
+
 
 
 
@@ -138,7 +137,7 @@ textInput.value = evaluateExpression(expression);
 
 
 //////
-      // Function to apply an operator to the operands stack
+// Function to apply an operator to the operands stack
 // function applyOperator(operators, operands) {
 //   const operator = operators.pop();
 //   const operand2 = operands.pop();
