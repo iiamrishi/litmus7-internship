@@ -62,7 +62,7 @@ function equalTo() {
     applyOperator(operators, operands);
   }
 
-  return operands[0];
+  return operands[0];//return the value to evaluateExpression
 }
 textInput.value = evaluateExpression(expression);
 }
