@@ -22,7 +22,8 @@ body{
 .box1{
     border-bottom: 1px solid black;
     display: grid;
-    grid-template-columns: 145px 400px 80px;;
+    grid-template-columns: 145px 400px 80px;
+    grid-gap: 10px;
     width: 80vw;
     height: 20vh;
     padding-top: 10px;
@@ -32,6 +33,7 @@ body{
 .imgborder{
     border: 2px solid black;
     border-radius: 4px;
+    background-color: white;
 }
 .buttongroup{
     border: 1px solid black;
