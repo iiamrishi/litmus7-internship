@@ -17,6 +17,7 @@ body{
 }
 .heading{
     display: flex;
+    font-size: 24px;
 
 }
 .box1{
@@ -34,7 +35,6 @@ body{
     border-radius: 4px;
 }
 .total{
-    display: flex;
-    
+
 
 }
