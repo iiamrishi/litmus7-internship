@@ -21,7 +21,7 @@ body{
 
 }
 .box1{
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     width: 80vw;
@@ -34,7 +34,20 @@ body{
     border: 2px solid black;
     border-radius: 4px;
 }
-.total{
+.buttongroup{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.buttongroup button{
+    border-radius: 4px;
+    border: hidden;
+    background-color: #ddd0c8;
 
-
+}
+#textbox{
+    width: 20px;
+    border: 1px solid black;
+    border-top: hidden;
+    border-bottom: hidden;
+    background-color: #ddd0c8;
 }
