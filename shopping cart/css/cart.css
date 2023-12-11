@@ -1,5 +1,6 @@
 body{
-    margin: 70px;
+    margin: 4.375rem;
+    font-family: sans-serif;
 }
 .main{
     border: 2px solid black;
@@ -10,6 +11,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: #ddd0c8;
     
 
 }
@@ -23,4 +25,16 @@ body{
     flex-wrap: wrap;
     width: 80vw;
     height: 20vh;
+    padding-top: 10px;
+    align-items: center;
+
+}
+.imgborder{
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.total{
+    display: flex;
+    
+
 }
