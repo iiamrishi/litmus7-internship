@@ -1,8 +1,9 @@
-body{
+body {
     margin: 4.375rem;
     font-family: sans-serif;
 }
-.main{
+
+.main {
     border: 2px solid black;
     border-radius: 10px;
     display: flex;
@@ -12,17 +13,19 @@ body{
     justify-content: flex-start;
     align-items: center;
     background-color: #ddd0c8;
-    
+
 
 }
-.heading{
+
+.heading {
     display: flex;
     font-size: 24px;
 }
-.box1{
+
+.box1 {
     border-bottom: 1px solid black;
     display: grid;
-    grid-template-columns: 145px 400px 80px;
+    grid-template-columns: 145px 400px 80px 5px 10px;
     grid-gap: 10px;
     width: 80vw;
     height: 20vh;
@@ -30,30 +33,37 @@ body{
     align-items: center;
 
 }
-.imgborder{
+
+.imgborder {
     border: 2px solid black;
     border-radius: 4px;
     background-color: white;
 }
-.buttongroup{
+
+.buttongroup {
     border: 1px solid black;
     border-radius: 5px;
 
 }
-.buttongroup button{
+
+.buttongroup button {
     border-radius: 4px;
     border: hidden;
     background-color: #ddd0c8;
 
 }
-#textbox{
+
+#textbox {
     width: 20px;
     border: 1px solid black;
     border-top: hidden;
     border-bottom: hidden;
     background-color: #ddd0c8;
 }
-.total{
-    display: flex;
-    align-items: flex-start;
+
+#updatingprice {
+    border: hidden;
+    width: 90px;
+
+
 }
