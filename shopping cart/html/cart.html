@@ -6,15 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="../css/cart.css">
+    <script src="../javascript/cart.js"></script>
 </head>
 
 <body>
     <div class="main">
         <div class="heading">
-            <b>MY CART</b>
+            <div>MY CART </div>
             <img src="../img/cart icon.png" alt="cart">
         </div>
-        <div class="box1">
+        <div class="boxflex">
+            <div class="product-desc-box">
+                <div class="imgborder">
+                    <img src="../img/s23.jpg" alt="s23">
+                </div>
+                <div> Samsung Galaxy S23<br><br>
+                    &#8377; 79999</div>
+            </div>
+
+            <div class="product-price-box">
+                <div class="buttongroup">
+                    <button id="minus" onclick="minus('textboxOne')"><b>-</b></button>
+                    <input class="textbox" id="textboxOne" type="text">
+                    <button id="plus" onclick="plus('textboxOne')"><b>+</b></button>
+                </div>
+                <div>
+                    <div class="updatingprice"> &#8377; 79999</div>
+                </div>
+            </div>
+        </div>
+        <div class="boxflex">
+            <div class="product-desc-box">
+                <div class="imgborder">
+                    <img src="../img/earbuds.jpg" alt="earbuds">
+                </div>
+                <div>Bose QuietComfort Ultra Earbuds<br><br>
+                    &#8377; 20499
+                </div>
+            </div>
+            <div class="product-price-box">
+                <div class="buttongroup">
+                    <button id="minus" onclick="minus('textboxTwo')"><b>-</b></button>
+                    <input class="textbox"id="textboxTwo" type="text">
+                    <button id="plus" onclick="plus('textboxTwo')"><b>+</b></button>
+                </div>
+                <div>
+                    <div class="updatingprice"> &#8377; 20499</div>
+                </div>
+            </div>
+        </div>
+        <div class="boxflex">
+            <div class="product-desc-box">
+                <div class="imgborder">
+                    <img src="../img/watch.jpg" alt="watch">
+                </div>
+                <div> Galaxy Watch5 Bluetooth (40mm)<br><br>
+                    &#8377; 27999
+                </div>
+            </div>
+            <div class="product-price-box">
+                <div class="buttongroup">
+                    <button id="minus" onclick="minus('textboxThree')"><b>-</b></button>
+                    <input class="textbox" id="textboxThree" type="text">
+                    <button id="plus" onclick="plus('textboxThree')"><b>+</b></button>
+                </div>
+                <div>
+                    <div class="updatingprice"> &#8377; 27999</div>
+                </div>
+            </div>
+        </div>
+        <div class="totalbox">
+            <div class="total">
+                Total
+            </div>
+            <div class="totalprice">
+                &#8377;
+            </div>
+        </div>
+
+
+
+        <!-- <div class="box1">
             <div class="imgborder">
                 <img src="../img/s23.jpg" alt="s23">
             </div>
@@ -45,8 +117,8 @@
             <div>
                 <input id="updatingprice" type="text">
             </div>
-        </div>
-        <div class="box1">
+        </div> -->
+        <!-- <div class="box1">
             <div class="imgborder">
                 <img src="../img/watch.jpg" alt="watch">
             </div>
@@ -61,12 +133,14 @@
             <div>
                 <input id="updatingprice" type="text">
             </div>
-        </div>
-        <div class="total">
+        </div> -->
+        <!-- <div class="total">
             Total
-        </div>
+            <input type="text">
+        </div> -->
 
     </div>
+
 
 </body>
 
