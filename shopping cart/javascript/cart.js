@@ -1,5 +1,9 @@
 
-function minus(id){//passing unique id as referance to this function
+function minus(id,price){//passing unique id as referance to this function
+    // console.log(document.getElementById(price))
+    let value= document.getElementById(price)
+    let temprice =value.textContent;
+    console.log(temprice)
     let tempnum= document.getElementById(id).value //we are fetching the value inside a particular id
  
     tempnum--;
@@ -10,18 +14,26 @@ function minus(id){//passing unique id as referance to this function
     displayValue(id,tempnum);
 }
 
-function plus(id){
+function plus(id,price){
+    alert(price)
     let tempnum= document.getElementById(id).value 
+    let temprice= document.getElementById('updatePrice').getAttribute('value')
+    // console.log(temprice)
     tempnum++;
-    if(tempnum>5){
+
+    temprice= temprice*2;
+     console.log(temprice)
+        if(tempnum>5){
         tempnum=5;
     }
-    displayValue(id,tempnum);
+    displayValue(id,tempnum,temprice);
 }
 
 
-function displayValue(id,tempnum){
+function displayValue(id,tempnum,temprice){
     document.getElementById(id).value = tempnum;
+    //document.getElementById('updatePrice').value= temprice;
+    document.getElementById('updatingPrice').getAttribute(id)= temprice;
 
 }
 

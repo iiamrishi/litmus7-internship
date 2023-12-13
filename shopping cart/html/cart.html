@@ -20,18 +20,19 @@
                 <div class="imgborder">
                     <img src="../img/s23.jpg" alt="s23">
                 </div>
-                <div> Samsung Galaxy S23<br><br>
-                    &#8377; 79999</div>
+                <div> Samsung Galaxy S23
+            <div id="updatePrice"> &#8377; 79999</div>
             </div>
+        </div>
 
             <div class="product-price-box">
                 <div class="buttongroup">
-                    <button id="minus" onclick="minus('textboxOne')"><b>-</b></button>
+                    <button id="minus" onclick="minus('textboxOne','updatePrice')"><b>-</b></button>
                     <input class="textbox" id="textboxOne" type="text">
-                    <button id="plus" onclick="plus('textboxOne')"><b>+</b></button>
+                    <button id="plus" onclick="plus('textboxOne','updatePrice')"><b>+</b></button>
                 </div>
                 <div>
-                    <div class="updatingprice"> &#8377; 79999</div>
+                    <div class="updatingprice" id="updatingPrice"> &#8377; 79999</div>
                 </div>
             </div>
         </div>
@@ -51,7 +52,7 @@
                     <button id="plus" onclick="plus('textboxTwo')"><b>+</b></button>
                 </div>
                 <div>
-                    <div class="updatingprice"> &#8377; 20499</div>
+                    <div class="updatingprice" > &#8377; 20499</div>
                 </div>
             </div>
         </div>
