@@ -102,3 +102,6 @@ body {
     gap: 80px;
 
 }
+#updatePrice{
+    display: flex;
+}
