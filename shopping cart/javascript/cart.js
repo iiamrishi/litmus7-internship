@@ -1,26 +1,26 @@
 
-function minus(id, price,) {//passing unique id as referance to this function
-    alert(price)
-    alert(id)
+function minus(id, price, updatingPriceId) {//passing unique id as referance to this function
+    // alert(price)
+    // alert(id)
     // console.log(document.getElementById(price))
     let value = document.getElementById(price)
     let temprice = value.textContent;
     console.log(temprice)
     let tempnum = document.getElementById(id).value //we are fetching the value inside a particular id
-
+    tempnum--;
     if (tempnum > 1) {
-        tempnum--;
+        temprice = tempnum * temprice;
     }
     // alert(temprice)
 
     if (tempnum < 1) {
         tempnum = 1;
     }
-    displayValue(id, tempnum, temprice);
+    displayValue(id, tempnum, temprice, updatingPriceId);
 }
 
 // let temp = 79999;
-function plus(id, price) {
+function plus(id, price, updatingPriceId) {
     // alert(price)
     // alert(id)
     let value = document.getElementById(price)
@@ -44,19 +44,42 @@ function plus(id, price) {
     }
 
     console.log(temprice)
-    displayValue(id, tempnum, temprice);
+    displayValue(id, tempnum, temprice, updatingPriceId);
 
 }
 
 
 
-function displayValue(id, tempnum, temprice) {
+
+
+
+
+function displayValue(id, tempnum, temprice, updatingPriceId) {
     document.getElementById(id).value = tempnum;
-    // alert(tempnum)
-    document.getElementById('updatingPrice').textContent = temprice;
-    document.getElementById('updatingPriceTwo').textContent = temprice;
-    document.getElementById('updatingPriceThree').textContent = temprice;
-
+    // alert(updatingPriceId)
+    //  let updatingPriceElement = document.getElementById(updatingPriceId);
+    // console.log(updatingPriceId)
+    document.getElementById(updatingPriceId).textContent = temprice;
+    // console.log(updatingPriceElement)
+    // document.getElementById(updatingPriceElement).textContent= temprice
+    // document.getElementById('updatingPrice').textContent = temprice;
+    // document.getElementById('updatingPriceTwo').textContent = temprice;
+    // document.getElementById('updatingPriceThree').textContent = temprice;
+    //  document.getElementById('totalPrice').textContent = temprice;
+    let totalPrice = total();
+    document.getElementById('totalPrice').textContent = totalPrice;
 }
 
 
+
+
+function total() {
+    let updatingPriceOne = parseFloat(document.getElementById('updatingPrice').textContent);
+    let updatingPriceTwo = parseFloat(document.getElementById('updatingPriceTwo').textContent);
+    let updatingPriceThree = parseFloat(document.getElementById('updatingPriceThree').textContent);
+
+    // let totalPrice=  parseFloat(document.getElementById(updatingPriceId).textContent);
+    let totalPrice = updatingPriceOne + updatingPriceTwo + updatingPriceThree;
+
+    return totalPrice;
+}

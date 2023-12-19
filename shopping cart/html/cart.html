@@ -28,9 +28,9 @@
 
             <div class="product-price-box">
                 <div class="buttongroup">
-                    <button id="minus" onclick="minus('textboxOne','updatePrice')"><b>-</b></button>
+                    <button id="minus" onclick="minus('textboxOne','updatePrice','updatingPrice')"><b>-</b></button>
                     <input class="textbox" id="textboxOne" type="text" readonly>
-                    <button id="plus" onclick="plus('textboxOne','updatePrice')"><b>+</b></button>
+                    <button id="plus" onclick="plus('textboxOne','updatePrice','updatingPrice')"><b>+</b></button>
                 </div>
                 <div>
                     <span> &#8377;</span>
@@ -49,9 +49,9 @@
             </div>
             <div class="product-price-box">
                 <div class="buttongroup">
-                    <button id="minus" onclick="minus('textboxTwo','updatePriceTwo')"><b>-</b></button>
+                    <button id="minus" onclick="minus('textboxTwo','updatePriceTwo','updatingPriceTwo')"><b>-</b></button>
                     <input class="textbox"id="textboxTwo" type="text" readonly>
-                    <button id="plus" onclick="plus('textboxTwo','updatePriceTwo')"><b>+</b></button>
+                    <button id="plus" onclick="plus('textboxTwo','updatePriceTwo','updatingPriceTwo')"><b>+</b></button>
                 </div>
                 <div>
                     <span> &#8377;</span>
@@ -70,9 +70,9 @@
             </div>
             <div class="product-price-box">
                 <div class="buttongroup">
-                    <button id="minus" onclick="minus('textboxThree','updatePriceThree')"><b>-</b></button>
+                    <button id="minus" onclick="minus('textboxThree','updatePriceThree','updatingPriceThree')"><b>-</b></button>
                     <input class="textbox" id="textboxThree" type="text" readonly>
-                    <button id="plus" onclick="plus('textboxThree','updatePriceThree')"><b>+</b></button>
+                    <button id="plus" onclick="plus('textboxThree','updatePriceThree','updatingPriceThree')"><b>+</b></button>
                 </div>
                 <div>
                     <span> &#8377;</span>
@@ -84,9 +84,9 @@
             <div class="total">
                 Total
             </div>
-            <div class="totalprice" id="totalPrice">
-                &#8377;
-            </div>
+            <div> &#8377;
+            <div class="totalprice" id="totalPrice"></div>
+        </div>
         </div>
 
 
