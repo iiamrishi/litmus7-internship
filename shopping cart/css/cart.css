@@ -1,12 +1,12 @@
 body {
-   margin: 10px;
+   margin: 0.625rem;
     font-family: sans-serif;
     overflow: hidden;
 }
 
 .main {
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 0.125rem solid black;
+    border-radius: 0.625rem;
     display: flex;
     /* height: auto; */
     /* flex-wrap: wrap; */
@@ -19,7 +19,7 @@ body {
 
 .heading {
     display: flex;
-    font-size: 24px;
+    font-size: 1.5rem;
     justify-content: center;
 }
 
@@ -35,49 +35,49 @@ body {
 
 } */
 .boxflex {
-    border-bottom: 1px solid black;
+    border-bottom: 0.063rem solid black;
     display: flex;
     justify-content: space-between;
-    padding-inline: 96px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-inline: 6rem;
+    padding-bottom: 1.875rem;
+    padding-top: 1.875rem;
 }
 
 .product-desc-box {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
 
 }
 
 .product-price-box {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
     flex-wrap: wrap;
     align-content: center;
 }
 
 .imgborder {
-    border: 2px solid black;
+    border: 0.125rem solid black;
     border-radius: 4px;
     background-color: white;
 }
 
 .buttongroup {
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 0.063rem solid black;
+    border-radius: 0.313rem;
 
 }
 
 .buttongroup button {
-    border-radius: 4px;
+    border-radius: 0.25rem;
     border: hidden;
     background-color: #ddd0c8;
 
 }
 
 .textbox {
-    width: 20px;
-    border: 1px solid black;
+    width: 1.25rem;
+    border: 0.063rem solid black;
     border-top: hidden;
     border-bottom: hidden;
     background-color: #ddd0c8;
@@ -85,7 +85,7 @@ body {
 
 .updatingprice {
     border: hidden;
-    width: 90px;
+    width: 5.625rem;
 
 
 }
@@ -98,10 +98,14 @@ body {
 .totalbox {
     display: flex;
     justify-content: space-around;
-    padding: 50px;
-    gap: 80px;
+    padding:3.125rem;
+    gap: 5rem;
 
 }
 #updatePrice{
     display: flex;
+}
+
+.symbol{
+    display: flex ;
 }

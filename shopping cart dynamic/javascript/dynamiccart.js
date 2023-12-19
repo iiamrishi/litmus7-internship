@@ -1,3 +1,7 @@
+const mockdata = [{productName: 'phone', price: 2, imgUrl: 'angamly' },
+{ name: 'buds', price: 5, imgUrl: 'imgurl' }
+    , { name: 'watch', price: 3, imgUrl: 'image' }]
+
 
 function minus(id, price, updatingPriceId) {//passing unique id as referance to this function
     // alert(price)
@@ -66,7 +70,7 @@ function displayValue(id, tempnum, temprice, updatingPriceId) {
     // document.getElementById('updatingPriceTwo').textContent = temprice;
     // document.getElementById('updatingPriceThree').textContent = temprice;
     //  document.getElementById('totalPrice').textContent = temprice;
-    let totalPrice = total (['updatingPrice', 'updatingPriceTwo', 'updatingPriceThree']);
+    let totalPrice = total(['updatingPrice', 'updatingPriceTwo', 'updatingPriceThree']);
     document.getElementById('totalPrice').textContent = totalPrice;
 }
 
@@ -77,7 +81,7 @@ function total(updatingPriceIds) {
     let totalPrice = 0;
     for (let i = 0; i < updatingPriceIds.length; i++) {
         let updatingPriceId = updatingPriceIds[i];
-        let updatingPrice = parseFloat(document.getElementById(updatingPriceId).textContent) || 0;
+        let updatingPrice = parseFloat(document.getElementById(updatingPriceId).textContent);
         totalPrice += updatingPrice;
     }
 
