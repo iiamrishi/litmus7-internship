@@ -1,0 +1,111 @@
+body {
+    margin: 0.625rem;
+     font-family: sans-serif;
+     overflow: hidden;
+ }
+ 
+ .main {
+     border: 0.125rem solid black;
+     border-radius: 0.625rem;
+     display: flex;
+     /* height: auto; */
+     /* flex-wrap: wrap; */
+     flex-direction: column;
+     justify-content: flex-start;
+     background-color: #ddd0c8;
+ 
+ 
+ }
+ 
+ .heading {
+     display: flex;
+     font-size: 1.5rem;
+     justify-content: center;
+ }
+ 
+ /* .box1 {
+     border-bottom: 1px solid black;
+     display: grid;
+     grid-template-columns: 145px 400px 80px 1px 10px;
+     grid-gap: 10px;
+     width: 80vw;
+     height: 20vh;
+     padding-top: 10px;
+     align-items: center;
+ 
+ } */
+ .boxflex {
+     border-bottom: 0.063rem solid black;
+     display: flex;
+     justify-content: space-between;
+     padding-inline: 6rem;
+     padding-bottom: 1.875rem;
+     padding-top: 1.875rem;
+ }
+ 
+ .product-desc-box {
+     display: flex;
+     gap: 1.875rem;
+ 
+ }
+ 
+ .product-price-box {
+     display: flex;
+     gap: 1.875rem;
+     flex-wrap: wrap;
+     align-content: center;
+ }
+ 
+ .imgborder {
+     border: 0.125rem solid black;
+     border-radius: 4px;
+     background-color: white;
+ }
+ 
+ .buttongroup {
+     border: 0.063rem solid black;
+     border-radius: 0.313rem;
+ 
+ }
+ 
+ .buttongroup button {
+     border-radius: 0.25rem;
+     border: hidden;
+     background-color: #ddd0c8;
+ 
+ }
+ 
+ .textbox {
+     width: 1.25rem;
+     border: 0.063rem solid black;
+     border-top: hidden;
+     border-bottom: hidden;
+     background-color: #ddd0c8;
+ }
+ 
+ .updatingprice {
+     border: hidden;
+     width: 5.625rem;
+ 
+ 
+ }
+ 
+ .total {
+     display: flex;
+ 
+ }
+ 
+ .totalbox {
+     display: flex;
+     justify-content: space-around;
+     padding:3.125rem;
+     gap: 5rem;
+ 
+ }
+ #updatePrice{
+     display: flex;
+ }
+ 
+ .symbol{
+     display: flex ;
+ }
