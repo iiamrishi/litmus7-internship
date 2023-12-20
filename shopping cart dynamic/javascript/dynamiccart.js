@@ -1,96 +1,125 @@
-const mockdata = [{productName: 'phone', price: 2, imgUrl: 'angamly' },
-{ name: 'buds', price: 5, imgUrl: 'imgurl' }
-    , { name: 'watch', price: 3, imgUrl: 'image' }]
-
-
-function minus(id, price, updatingPriceId) {//passing unique id as referance to this function
-    // alert(price)
-    // alert(id)
-    // console.log(document.getElementById(price))
-    let value = document.getElementById(price)
-    let temprice = value.textContent;
-    console.log(temprice)
-    let tempnum = document.getElementById(id).value //we are fetching the value inside a particular id
-    tempnum--;
-    if (tempnum >= 0) {
-        temprice = tempnum * temprice;
+const products = [
+    {
+        "product": "Samsung Galaxy S23",
+        "image": "../img/s23.jpg",
+        "price": {
+            "symbol": "₹",
+            "basePrice": 2,
+            "updatePrice": 0
+        }
+    },
+    {
+        "product": "Bose QuietComfort Ultra earbuds",
+        "image": "../img/earbuds.jpg",
+        "price": {
+            "symbol": "₹",
+            "basePrice": 5,
+            "updatePrice": 0
+        }
+    },
+    {
+        "product": "Galaxy Watch5 Bluetooth (40mm)",
+        "image": "../img/watch.jpg",
+        "price": {
+            "symbol": "₹",
+            "basePrice": 3,
+            "updatePrice": 0
+        }
     }
-    // alert(temprice)
+];
+
+function processProductData(products) {
+    function generateProductHTML(product) {
+        return `
+            <div class="product-desc-box">
+                <div class="imgborder">
+                    <img src="${product.image}" alt="${product.product}">
+                </div>
+                <div>
+                    <div>
+                        <div class="symbol" >${product.price.symbol}
+                            <div class="updatePrice">${product.price.basePrice}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-price-box">
+                <div class="buttongroup">
+                    <button class="minus" onclick="minus('${product.product}','updatePrice','updatingPrice')"><b>-</b></button>
+                    <input class="textbox" id="${product.product}" type="text" readonly>
+                    <button class="plus" onclick="plus('${product.product}','updatePrice','updatingPrice')"><b>+</b></button>
+                </div>
+                <div>
+                    <div class="symbol">${product.price.symbol}
+                        <div class="updatingprice" id="updatingPrice">0</div>
+                    </div>
+                </div>
+            </div>`;
+    }
+
+    function displayProducts() {
+        const productContainer = document.getElementById('productContainer');
+        products.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'boxflex';
+            productDiv.innerHTML = generateProductHTML(product);
+            productContainer.appendChild(productDiv);
+        });
+    }
+
+    displayProducts();
+}
+
+processProductData(products);
+
+function minus(id, price, updatingPriceId) {
+    let value = document.getElementById(price);
+    let temprice = parseFloat(value.textContent);
+    let tempnum = parseInt(document.getElementById(id).value, 10);
+    tempnum--;
+
+    if (tempnum >= 0) {
+        temprice = tempnum * parseFloat(value.textContent);
+    }
 
     if (tempnum <= 0) {
         tempnum = 0;
     }
+
     displayValue(id, tempnum, temprice, updatingPriceId);
 }
 
-// let temp = 79999;
 function plus(id, price, updatingPriceId) {
-    // alert(price)
-    // alert(id)
-    let value = document.getElementById(price)
-    // console.log(value)
-    let tempnum = document.getElementById(id).value
-    // let temprice= document.getElementById('updatePrice').getAttribute('value')
-    let temprice = value.textContent;
-    //  console.log(temprice)
-
-
+    let value = document.getElementById(price);
+    let tempnum = parseInt(document.getElementById(id).value, 10);
+    let temprice = parseFloat(value.textContent);
     tempnum++;
+
     if (tempnum > 5) {
         tempnum = 5;
     }
+
     if (tempnum >= 1) {
-
         temprice = temprice * tempnum;
-
-        //console.log(temprice)
-
     }
 
-    console.log(temprice)
     displayValue(id, tempnum, temprice, updatingPriceId);
-
 }
-
-
-
-
-
-
 
 function displayValue(id, tempnum, temprice, updatingPriceId) {
     document.getElementById(id).value = tempnum;
-    // alert(updatingPriceId)
-    //  let updatingPriceElement = document.getElementById(updatingPriceId);
-    // console.log(updatingPriceId)
     document.getElementById(updatingPriceId).textContent = temprice;
-    // console.log(updatingPriceElement)
-    // document.getElementById(updatingPriceElement).textContent= temprice
-    // document.getElementById('updatingPrice').textContent = temprice;
-    // document.getElementById('updatingPriceTwo').textContent = temprice;
-    // document.getElementById('updatingPriceThree').textContent = temprice;
-    //  document.getElementById('totalPrice').textContent = temprice;
     let totalPrice = total(['updatingPrice', 'updatingPriceTwo', 'updatingPriceThree']);
     document.getElementById('totalPrice').textContent = totalPrice;
 }
-
-
-
 
 function total(updatingPriceIds) {
     let totalPrice = 0;
     for (let i = 0; i < updatingPriceIds.length; i++) {
         let updatingPriceId = updatingPriceIds[i];
-        let updatingPrice = parseFloat(document.getElementById(updatingPriceId).textContent);
+        let updatingPrice = parseFloat(document.getElementById(updatingPriceId).textContent) || 0;
         totalPrice += updatingPrice;
     }
-
-    // let updatingPriceOne = parseFloat(document.getElementById('updatingPrice').textContent);
-    // let updatingPriceTwo = parseFloat(document.getElementById('updatingPriceTwo').textContent);
-    // let updatingPriceThree = parseFloat(document.getElementById('updatingPriceThree').textContent);
-
-    // // let totalPrice=  parseFloat(document.getElementById(updatingPriceId).textContent);
-    // let totalPrice = updatingPriceOne + updatingPriceTwo + updatingPriceThree;
 
     return totalPrice;
 }

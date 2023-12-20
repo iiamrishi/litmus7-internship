@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>dynamic Shopping Cart</title>
     <link rel="stylesheet" href="../css/dynamiccart.css">
     <script src="../javascript/dynamiccart.js"></script>
 </head>
@@ -15,93 +15,19 @@
             <div>MY CART </div>
             <img src="../img/cart icon.png" alt="cart">
         </div>
-        <div class="boxflex">
-            <div class="product-desc-box">
-                <div class="imgborder">
-                    <img src="../img/s23.jpg" alt="s23">
-                </div>
-                <div>
-                <div> Samsung Galaxy S23
-                    <div class="symbol" >&#8377;
-            <div id="updatePrice"> 2</div>
-                    </div>
-        </div>
-        </div>
-        </div>
-
-            <div class="product-price-box">
-                <div class="buttongroup">
-                    <button id="minus" onclick="minus('textboxOne','updatePrice','updatingPrice')"><b>-</b></button>
-                    <input class="textbox" id="textboxOne" type="text" readonly>
-                    <button id="plus" onclick="plus('textboxOne','updatePrice','updatingPrice')"><b>+</b></button>
-                </div>
-                <div>
-                    <div class="symbol"> &#8377;
-                    <div class="updatingprice" id="updatingPrice"> </div>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="boxflex">
-            <div class="product-desc-box">
-                <div class="imgborder">
-                    <img src="../img/earbuds.jpg" alt="earbuds">
-                </div>
-                <div>Bose QuietComfort Ultra earbuds
-                    <div class="symbol">&#8377;
-                    <div id="updatePriceTwo"> 5</div>
-                    </div>
-                </div>
-            </div>
-            <div class="product-price-box">
-                <div class="buttongroup">
-                    <button id="minus" onclick="minus('textboxTwo','updatePriceTwo','updatingPriceTwo')"><b>-</b></button>
-                    <input class="textbox"id="textboxTwo" type="text" readonly>
-                    <button id="plus" onclick="plus('textboxTwo','updatePriceTwo','updatingPriceTwo')"><b>+</b></button>
-                </div>
-                <div>
-                    <div class="symbol"> &#8377;
-                    <div class="updatingprice" id="updatingPriceTwo" ></div>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="boxflex">
-            <div class="product-desc-box">
-                <div class="imgborder">
-                    <img src="../img/watch.jpg" alt="watch">
-                </div>
-                <div> Galaxy Watch5 Bluetooth (40mm)
-                    <div class="symbol">&#8377;
-                        <div id="updatePriceThree">3</div> 
-                    </div>
-                </div>
-            </div>
-            <div class="product-price-box">
-                <div class="buttongroup">
-                    <button id="minus" onclick="minus('textboxThree','updatePriceThree','updatingPriceThree')"><b>-</b></button>
-                    <input class="textbox" id="textboxThree" type="text" readonly>
-                    <button id="plus" onclick="plus('textboxThree','updatePriceThree','updatingPriceThree')"><b>+</b></button>
-                </div>
-                <div>
-                    <div class="symbol"> &#8377;
-                    <div class="updatingprice" id="updatingPriceThree"> </div>
-                </div>
-                </div>
-            </div>
+        <div id="productContainer" class="boxflex">
+            <!-- Product items will be added here dynamically -->
         </div>
         <div class="totalbox">
             <div class="total">
                 Total
             </div>
-            <div class="symbol">  &#8377;
-            <div class="totalprice" id="totalPrice"></div>
+            <div class="symbol"> &#8377;
+                <div class="totalprice" id="totalPrice">0</div>
+            </div>
         </div>
-        </div>
-
     </div>
-
-
+    <script src="../javascript/dynamiccart.js"></script>
 </body>
 
 </html>
