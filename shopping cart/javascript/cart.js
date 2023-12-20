@@ -8,12 +8,12 @@ function minus(id, price, updatingPriceId) {//passing unique id as referance to 
     console.log(temprice)
     let tempnum = document.getElementById(id).value //we are fetching the value inside a particular id
     tempnum--;
-    if (tempnum > 1) {
+    if (tempnum >= 0) {
         temprice = tempnum * temprice;
     }
     // alert(temprice)
 
-    if (tempnum < 0) {
+    if (tempnum <0) {
         tempnum = 0;
     }
     displayValue(id, tempnum, temprice, updatingPriceId);
@@ -35,7 +35,7 @@ function plus(id, price, updatingPriceId) {
     if (tempnum > 5) {
         tempnum = 5;
     }
-    if (tempnum >= 1) {
+    if (tempnum >= 0) {
 
         temprice = temprice * tempnum;
 
