@@ -8,14 +8,15 @@ function minus(id, price, updatingPriceId) {//passing unique id as referance to 
     console.log(temprice)
     let tempnum = document.getElementById(id).value //we are fetching the value inside a particular id
     tempnum--;
-    if (tempnum >= 0) {
+    if (tempnum >=0 ) {
         temprice = tempnum * temprice;
+    }
+    if (tempnum <=0) {
+        tempnum = 0;
     }
     // alert(temprice)
 
-    if (tempnum <0) {
-        tempnum = 0;
-    }
+   
     displayValue(id, tempnum, temprice, updatingPriceId);
 }
 

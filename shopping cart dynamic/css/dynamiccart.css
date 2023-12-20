@@ -1,7 +1,6 @@
 body {
     margin: 0.625rem;
      font-family: sans-serif;
-     overflow: hidden;
  }
  
  .main {
@@ -41,6 +40,7 @@ body {
      padding-inline: 6rem;
      padding-bottom: 1.875rem;
      padding-top: 1.875rem;
+     flex-direction: column;
  }
  
  .product-desc-box {
