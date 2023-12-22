@@ -134,8 +134,8 @@ function total(productIds) {
         let updatingPrice = parseFloat(updatingPriceElement.textContent) || 0;/*it extracts the updatingprice from content of selected
                                                                                 element and convert to floating number and if convertion 
                                                                                 result to NaN it defaults to zero*/
-/*Checks if the updating price is a valid number. If valid, it adds the updating price to the totalPrice. If not valid,
- it logs an error message to the console.*/
+        /*Checks if the updating price is a valid number. If valid, it adds the updating price to the totalPrice. If not valid,
+         it logs an error message to the console.*/
         if (!isNaN(updatingPrice)) {
             console.log(`Updating Price for ${productId}:`, updatingPrice);
             totalPrice += updatingPrice;
