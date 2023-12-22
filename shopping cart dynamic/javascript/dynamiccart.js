@@ -125,7 +125,7 @@ function updateValue(id, change) {/*this function is used for update the quantit
 
 //this function calculate the total price based on the array of product identifiers or name
 function total(productIds) {
-    let totalPrice = 0;//set intial value of tatalPrice as zero
+    let totalPrice = 0;//set intial value of totalPrice as zero
     //this loop iterate over the array of productIds
     for (let i = 0; i < productIds.length; i++) {
         let productId = productIds[i];//Retrieves the current product identifier from the array.
