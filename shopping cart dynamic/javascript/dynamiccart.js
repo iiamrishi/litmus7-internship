@@ -1,6 +1,8 @@
+
 // create products to dynamicaly use, by creating  array of product details
 const products = [
     {
+        "uuid": "00aea848-bac4-4816-8c17-cd8c8e3ec4f4",
         "product": "Samsung Galaxy S23",
         "image": "../img/s23.jpg",
         "price": {
@@ -10,6 +12,7 @@ const products = [
         }
     },
     {
+        "uuid": "9dcfaac9-47b5-48ae-a0e7-cae208221414",
         "product": "Bose QuietComfort Ultra earbuds",
         "image": "../img/earbuds.jpg",
         "price": {
@@ -19,6 +22,7 @@ const products = [
         }
     },
     {
+        "uuid": "79900166-86fd-4075-8c24-47ce05185785",
         "product": "Galaxy Watch5 Bluetooth (40mm)",
         "image": "../img/watch.jpg",
         "price": {
@@ -26,51 +30,49 @@ const products = [
             "basePrice": 3,
             "updatePrice": 0
         }
-    }
+    },
 ];
-
 
 document.addEventListener('DOMContentLoaded', function () {/* this funtion has an event listener that waits for HTML document to be fully loaded before executing the provided function. 
                                                             This ensures that the Js code inside the function runs only after the HTML document has been parsed and is ready for manipulation.*/
-    function processProductData(products) { //this function is used to process the product data given in the array of products
+    function processProductData(products) {//this function is used to process the product data given in the array of products
         function generateProductHTML(product) {/*function is used for creating and returning an HTML string representing the structure 
                                                  and content of a product box based on the information provided in the product object. 
                                                  This HTML string is then used to display each product on a webpage.*/
             return `
             <div class="product-desc-box">
-            <div class="wrap">
-            <div class="imgborder">
-            <!-- used to display image of products -->
-                 <img src="${product.image}" alt="${product.product}"> 
-            </div>
-            <div class="product-info">
-            <!-- used to display Product Name -->
-                <div class="product-name">${product.product}</div>
-                <div class="product-price">
-                <!--  Product Price -->
-                    <div class="symbol">${product.price.symbol}
-                    <!-- Update Price -->
-                        <div class="updatePrice" data-price="${product.price.basePrice}">${product.price.basePrice}</div>
+                <div class="wrap">
+                    <div class="imgborder">
+                    <!-- used to display image of products -->
+                        <img src="${product.image}" alt="${product.product}">
+                    </div>
+                    <div class="product-info">
+                    <!-- used to display Product Name -->
+                        <div class="product-name">${product.product}</div>
+                        <div class="product-price">
+                        <!--  Product Price -->
+                            <div class="symbol">${product.price.symbol}
+                            <!-- Update Price -->
+                                <div class="updatePrice" data-price="${product.price.basePrice}">${product.price.basePrice}</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </div>
-            <div class="product-price-box">
-                <div class="buttongroup">
-                <!-- can be used addEventListener instead of onclick. i used onclick because its easy way to impliment-->
-                    <button class="minus" onclick="updateValue('${product.product}', -1)"><b>-</b></button>
-                    <input class="textbox" id="${product.product}" type="text" readonly>
-                    <button class="plus" onclick="updateValue('${product.product}', 1)"><b>+</b></button>
-                </div>
-                <div>
-                    <div class="symbol">${product.price.symbol}
-                    <!-- Updating Price -->
-                        <div class="updatingprice" data-updatingPriceId="${product.product}" data-price="${product.price.basePrice}">0</div>
+                <div class="product-price-box">
+                    <div class="buttongroup">
+                    <!-- can be used addEventListener instead of onclick. i used onclick because its easy way to impliment-->
+                        <button class="minus" onclick="updateValue('${product.uuid}', -1)"><b>-</b></button>
+                        <input class="textbox" id="${product.uuid}" type="text" readonly>
+                        <button class="plus" onclick="updateValue('${product.uuid}', 1)"><b>+</b></button>
+                    </div>
+                    <div>
+                        <div class="symbol">${product.price.symbol}
+                        <!-- Updating Price -->
+                            <div class="updatingprice" data-updatingPriceId="${product.uuid}" data-price="${product.price.basePrice}">0</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>`;
-
+            </div>`;
         }
 
         function displayProducts() {//this function is used to rendering the product information
@@ -79,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {/* this funtion has a
                 const productDiv = document.createElement('div');//it creates new div for each product
                 productDiv.className = 'boxflex';// class boxflex is assigned for newly created div, here boxflex class is used for styling
                 productDiv.innerHTML = generateProductHTML(product);/* The innerHTML property is set to the HTML content generated by the 'generateProductHTML' function for the current product.
-                                                                     This includes the structure and content of the product box.*/
+                                                                    This includes the structure and content of the product box.*/
                 productContainer.appendChild(productDiv);//function is responsible for appending a newly created div element, which represents a product.
             });
         }
@@ -90,13 +92,16 @@ document.addEventListener('DOMContentLoaded', function () {/* this funtion has a
     processProductData(products);//function processProductData is invoked here
 });
 
-function updateValue(id, change) {/*this function is used for update the quantity of product and calculate the total price based on
+function updateValue(uuid, change) {/*this function is used for update the quantity of product and calculate the total price based on
                                     increment or decrement of quantity of product*/
-    let valueElement = document.querySelector(`[data-updatingPriceId="${id}"]`);/*This line selects element with attribute data-updatingPriceId equal to the provided id.
-                                                                                 This element is expected to be a div displaying the updating price for the corresponding product. */
-    let tempnum = parseInt(document.getElementById(`${id}`).value, 10) || 0;/*this line retreive element of corresponding id and convert
-                                                                            it to number and pass the value to tempnum*/
+    let valueElement = document.querySelector(`[data-updatingPriceId="${uuid}"]`);/*This line selects element with attribute data-updatingPriceId equal to the provided id.
+                                                                                This element is expected to be a div displaying the updating price for the corresponding product. */
 
+    let tempnum = parseInt(document.getElementById(`${uuid}`).value, 10) || 0;/*this line retreive element of corresponding id and convert
+                                                                              it to number and pass the value to tempnum*/
+
+
+    let product = products.find(prod => prod.uuid === uuid);
     // Use Number() instead of Number.parseFloat() for simplicity
     let temprice = Number(valueElement.getAttribute('data-price'));/*it retrieves the value of data-price from valueElement and convert 
                                                                     it to number and pass to temprice*/
@@ -104,38 +109,37 @@ function updateValue(id, change) {/*this function is used for update the quantit
     // Check if temprice is NaN or and assign default value of zero in such cases
     temprice = isNaN(temprice) ? 0 : temprice;
 
-    console.log(`Before update - tempnum: ${tempnum}, temprice: ${temprice}`);
-
     tempnum += change;
     //this if is for limiting not to go below zero
+
     if (tempnum < 0) {
         tempnum = 0;
     } else if (tempnum > 5) {//this is for limit to 5 quantity 
         tempnum = 5;
     }
-    console.log(`Value element:`, valueElement);
-    console.log(`data-price attribute:`, valueElement.getAttribute('data-price'));
-    temprice = tempnum * temprice;
-    document.getElementById(`${id}`).value = tempnum;
-    valueElement.textContent = temprice;
+
+    temprice = tempnum * product.price.basePrice;
     /*this line calls the function total and passing  an array of product identifiers as an argument. */
-    let totalPrice = total(['Samsung Galaxy S23', 'Bose QuietComfort Ultra earbuds', 'Galaxy Watch5 Bluetooth (40mm)']);
+    document.getElementById(`${uuid}`).value = tempnum;
+
+    valueElement.textContent = temprice;
+
+    let totalPrice = total(products.map(prod => prod.uuid));
     document.getElementById('totalPrice').textContent = totalPrice;
 }
 
 //this function calculate the total price based on the array of product identifiers or name
 function total(productIds) {
     let totalPrice = 0;//set intial value of totalPrice as zero
-    //this loop iterate over the array of productIds
-    for (let i = 0; i < productIds.length; i++) {
+    for (let i = 0; i < productIds.length; i++) {//this loop iterate over the array of productIds
         let productId = productIds[i];//Retrieves the current product identifier from the array.
         // Uses the product identifier to select the element with the corresponding data-updatingPriceId
         let updatingPriceElement = document.querySelector(`[data-updatingPriceId="${productId}"]`);
         let updatingPrice = parseFloat(updatingPriceElement.textContent) || 0;/*it extracts the updatingprice from content of selected
-                                                                                element and convert to floating number and if convertion 
-                                                                                result to NaN it defaults to zero*/
+                                                                                 element and convert to floating number and if convertion 
+                                                                                 result to NaN it defaults to zero*/
         /*Checks if the updating price is a valid number. If valid, it adds the updating price to the totalPrice. If not valid,
-         it logs an error message to the console.*/
+                 it logs an error message to the console.*/
         if (!isNaN(updatingPrice)) {
             console.log(`Updating Price for ${productId}:`, updatingPrice);
             totalPrice += updatingPrice;
@@ -143,10 +147,8 @@ function total(productIds) {
             console.error(`Invalid updating price for ${productId}.`);
         }
     }
-
     // Ensure totalPrice is a number and not NaN
     totalPrice = isNaN(totalPrice) ? 0 : totalPrice;
 
-    return totalPrice; //return the calculated totalPrice
+    return totalPrice;
 }
-
