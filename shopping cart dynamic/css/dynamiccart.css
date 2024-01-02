@@ -1,17 +1,12 @@
 body {
      font-family: sans-serif;
-     display: flex;
-    justify-content: center;
-    padding-top: 20px 
-     
+    padding: 3.125rem;
+     overflow: hidden;
  }
  
  .main {
      border: 0.125rem solid black;
      border-radius: 0.625rem;
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
      background-color: #ddd0c8;
 
  
@@ -30,9 +25,7 @@ body {
      border-bottom: 0.063rem solid black;
      display: flex;
      padding-inline: 3rem;
-     padding-bottom: 1.2rem;
-     padding-top: 1.2rem;
-     /* padding: 1.3rem 3rem; */
+     padding: 1.2rem 1.2rem;
      flex-direction: column;
  }
  
@@ -53,7 +46,7 @@ body {
  
  .imgborder {
      border: 0.125rem solid black;
-     border-radius: 4px;
+     border-radius: 0.25rem;
      background-color: white;
  }
  
@@ -84,12 +77,7 @@ body {
  
  
  }
- 
- .total {
-     display: flex;
- 
- }
- 
+  
  .totalbox {
      display: flex;
      justify-content: space-around;
@@ -97,10 +85,6 @@ body {
      gap: 5rem;
  
  }
- #updatePrice{
-     display: flex;
- }
- 
  .symbol{
      display: flex ;
  }
